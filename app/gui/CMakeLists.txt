@@ -61,12 +61,17 @@ endif()
 find_package(Threads REQUIRED)
 
 if(USE_SYSTEM_LIBS)
-  find_package(QScintilla REQUIRED)
-else()
-  # We build QScintilla as part of the main project to make it easy to debug/fix
-  # It is not built as part of externals
+  # Try to find the system-installed QScintilla without immediately failing
+  find_package(QScintilla QUIET)
+endif()
+
+# If QScintilla wasn’t found (either because USE_SYSTEM_LIBS wasn’t set or the system install is missing),
+# use the vendored version.
+if(NOT QScintilla_FOUND)
+  message(STATUS "System QScintilla not found. Falling back to bundled QScintilla.")
   add_subdirectory(QScintilla_src-2.14.1)
 endif()
+
 
 add_subdirectory(vendor/SingleApplication)
 
