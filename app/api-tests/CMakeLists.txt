@@ -1,8 +1,9 @@
 project(api-tests)
 
 set(TESTS_ROOT ${CMAKE_CURRENT_LIST_DIR})
+set(VENDOR_DIR "${TESTS_ROOT}/vendor")
 
-find_package(Catch2 CONFIG REQUIRED)
+add_subdirectory("${VENDOR_DIR}/Catch2-3.8.0")
 
 set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)

@@ -21,7 +21,7 @@
 #include <vector>
 #include "server_shm.hpp"
 
-#include "kiss_fft/kiss_fft.h"
+#include "kiss_fft.h"
 
 #include "api/sonicpi_api.h"
 
@@ -66,7 +66,7 @@ private:
     std::atomic<bool> m_consumed = { false };
 
     // FFT
-    mkiss_fft_cfg m_cfg;
+    kiss_fft_cfg m_cfg;
     std::vector<std::complex<float>> m_fftIn[2];
     std::vector<std::complex<float>> m_fftOut[2];
     std::vector<float> m_fftMag[2];

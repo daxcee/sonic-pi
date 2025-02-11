@@ -1263,7 +1263,7 @@ module SonicPi
     end
 
     def __move_thread_to_new_parent!(child_t, new_parent_t)
-      __no_kill_block t do
+      __no_kill_block do
         __remove_thread_from_parent_subthreads!(child_t)
 
         __system_thread_locals(new_parent_t).get(:sonic_pi_local_spider_subthread_mutex).synchronize do

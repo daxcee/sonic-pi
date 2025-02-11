@@ -6,7 +6,7 @@ cd %~dp0
 server\native\ruby\bin\ruby server/ruby/bin/i18n-tool.rb -t
 
 @echo Generating docs for the Qt GUI...
-copy /Y gui\qt\utils\ruby_help.tmpl gui\qt\utils\ruby_help.h
+copy /Y gui\utils\ruby_help.tmpl gui\utils\ruby_help.h
 server\native\ruby\bin\ruby server/ruby/bin/qt-doc.rb
 
 cd %WORKING_DIR%

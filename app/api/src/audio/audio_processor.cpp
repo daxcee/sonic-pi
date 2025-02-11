@@ -179,7 +179,7 @@ void AudioProcessor::CalculateFFT(ProcessedAudio& audio)
         }
 
         // Do the FFT
-        kiss_fft(m_cfg, (const mkiss_fft_cpx*)&m_fftIn[channel][0], (mkiss_fft_cpx*)&m_fftOut[channel][0]);
+        kiss_fft(m_cfg, (const kiss_fft_cpx*)&m_fftIn[channel][0], (kiss_fft_cpx*)&m_fftOut[channel][0]);
 
         // Sample 0 is the all frequency component
         m_fftOut[channel][0] = std::complex<float>(0.0f, 0.0f);

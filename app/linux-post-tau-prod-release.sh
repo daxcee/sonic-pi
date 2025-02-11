@@ -18,9 +18,6 @@ while [ -n "$1" ]; do
         -c|--config)
             shift 2
             ;;
-        -n|--no-imgui)
-            shift
-            ;;
         -s|--system-libs)
             shift
             ;;

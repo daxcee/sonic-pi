@@ -98,7 +98,7 @@ for:
   build_script:
     # generate build script
     - cd "$APPVEYOR_BUILD_FOLDER"
-    - cd app/gui/qt
+    - cd app/gui
     - ./mac-prebuild.sh
     - # (We don't build aubio from source in prebuild, but instead use the brew installed version so that the build can complete within the 1 hour time limit)
     - ./mac-config.sh --config $CONFIGURATION
@@ -149,7 +149,7 @@ for:
   build_script:
     # generate build script
     - cd "$APPVEYOR_BUILD_FOLDER"
-    - cd app/gui/qt
+    - cd app/gui
     - ./linux-prebuild.sh --build-aubio
     - ./linux-config.sh --config $CONFIGURATION
     - cd build

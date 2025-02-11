@@ -11,5 +11,3 @@ trap cleanup_function EXIT
 
 cd "${SCRIPT_DIR}"/build
 cmake --build .
-
-

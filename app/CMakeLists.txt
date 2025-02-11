@@ -1,8 +1,20 @@
 cmake_minimum_required(VERSION 3.13)
+set(APP_ROOT ${CMAKE_CURRENT_LIST_DIR})
 
-option(USE_SYSTEM_LIBS "Build using system libraries instead of vcpkg libraries" OFF)
+# vcpkg toolchain - Must be declared before project
+if (NOT USE_SYSTEM_LIBS)
+  set(CMAKE_TOOLCHAIN_FILE ${APP_ROOT}/vcpkg/scripts/buildsystems/vcpkg.cmake CACHE STRING "Vcpkg toolchain file")
+endif()
+
+project(SonicPi)
+
 
 message(STATUS "CMakeLists: Sonic Pi")
+
+# Different triplet for windows
+if (WIN32)
+    set(VCPKG_TARGET_TRIPLET x64-windows-static-md CACHE STRING "triplet")
+endif()
 
 # Sonic Pi Requires a C++ 17 Compiler to build it
 set(CMAKE_CXX_STANDARD 17)
@@ -21,22 +33,10 @@ if(APPLE)
   set(CMAKE_OSX_DEPLOYMENT_TARGET "12")
 endif()
 
-set(APP_ROOT ${CMAKE_CURRENT_LIST_DIR})
+
 if (NOT APP_INSTALL_ROOT)
     set(APP_INSTALL_ROOT ${APP_ROOT})
 endif()
-
-# Different triplet for windows
-if (WIN32)
-    set(VCPKG_TARGET_TRIPLET x64-windows-static-md CACHE STRING "triplet")
-endif()
-
-# vcpkg toolchain - Must be declared before project
-if (NOT USE_SYSTEM_LIBS)
-  set(CMAKE_TOOLCHAIN_FILE ${APP_ROOT}/vcpkg/scripts/buildsystems/vcpkg.cmake CACHE STRING "Vcpkg toolchain file")
-endif()
-
-project(SonicPi)
 
 list(APPEND CMAKE_MODULE_PATH ${APP_ROOT}/cmake)
 include(cmake/utils.cmake)

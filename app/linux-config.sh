@@ -11,7 +11,6 @@ trap cleanup_function EXIT
 
 args=("$@")
 config="Release"
-no_imgui=false
 system_libs=false
 
 # extract options and their arguments into variables.
@@ -29,10 +28,6 @@ while [ -n "$1" ]; do
                     ;;
             esac
             shift 2
-            ;;
-        -n|--no-imgui)
-            no_imgui=true
-            shift
             ;;
         -s|--system-libs|-o|--offline-build)
             system_libs=true
@@ -57,5 +52,5 @@ option() {
   fi
 }
 
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="$config" -DBUILD_IMGUI_INTERFACE="$(option "!$no_imgui")" -DUSE_SYSTEM_LIBS="$(option "$system_libs")" ..
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="$config" -DUSE_SYSTEM_LIBS="$(option "$system_libs")" ..
 

@@ -11,7 +11,6 @@ trap cleanup_function EXIT
 
 args=("$@")
 config="Release"
-no_imgui=false
 
 # extract options and their arguments into variables.
 while [ -n "$1" ]; do
@@ -28,10 +27,6 @@ while [ -n "$1" ]; do
                     ;;
             esac
             shift 2
-            ;;
-        -n|--no-imgui)
-            no_imgui=true
-            shift
             ;;
         -s|--system-libs|-o|--offline-build)
             shift
@@ -57,7 +52,7 @@ option() {
 
 if [[ $(uname -m) == 'arm64' ]] || [ "$SONIC_PI_BUILD_TARGET" == 'arm64' ]
 then
-  cmake -G "Unix Makefiles" -DCMAKE_OSC_ARCHITECTURES="ARM64" -DCMAKE_BUILD_TYPE="$config" -DBUILD_IMGUI_INTERFACE="$(option "!$no_imgui")" ..
+  cmake -G "Unix Makefiles" -DCMAKE_OSC_ARCHITECTURES="ARM64" -DCMAKE_BUILD_TYPE="$config"  ..
 else
-  cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="$config" -DBUILD_IMGUI_INTERFACE="$(option "!$no_imgui")" ..
+  cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="$config" ..
 fi

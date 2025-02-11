@@ -11,10 +11,6 @@ trap cleanup_function EXIT
 
 cd "${SCRIPT_DIR}"
 
-echo "Cleaning out vcpkg...."
-rm -rf vcpkg
-
-
 echo "Cleaning out build dir...."
 rm -rf build
 

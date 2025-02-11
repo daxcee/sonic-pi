@@ -19,6 +19,6 @@ if not exist "vcpkg\vcpkg.exe" (
 
 cd vcpkg
 @echo Installing Libraries
-vcpkg install libsndfile[core,external-libs] kissfft fmt sdl2 gl3w reproc gsl-lite concurrentqueue platform-folders catch2 --triplet x64-windows-static-md --recurse
+vcpkg install libsndfile[core,external-libs] --triplet x64-windows-static-md --recurse
 
 cd %WORKING_DIR%

@@ -25,5 +25,5 @@ echo "Translating tutorial..."
 "$RUBY" "${SCRIPT_DIR}"/server/ruby/bin/i18n-tool.rb -t
 
 echo "Generating docs for the Qt GUI..."
-cp "${SCRIPT_DIR}"/gui/qt/utils/ruby_help.tmpl "${SCRIPT_DIR}"/gui/qt/utils/ruby_help.h
+cp "${SCRIPT_DIR}"/gui/utils/ruby_help.tmpl "${SCRIPT_DIR}"/gui/utils/ruby_help.h
 "$RUBY" "${SCRIPT_DIR}"/server/ruby/bin/qt-doc.rb

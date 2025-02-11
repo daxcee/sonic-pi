@@ -37,12 +37,12 @@ cp -r server/beam/tau/_build/prod/rel build/linux_dist/app/server/beam/tau/_buil
 cp server/beam/tau/boot-lin.sh build/linux_dist/app/server/beam/tau/
 
 # Copy only necessary files for the Qt GUI
-mkdir -p build/linux_dist/app/gui/qt
-cp -r gui/qt/{lang,theme} build/linux_dist/app/gui/qt/
+mkdir -p build/linux_dist/app/gui/
+cp -r gui/{lang,theme} build/linux_dist/app/gui/
 
 # Copy Qt GUI binary
-mkdir -p build/linux_dist/app/build/gui/qt
-cp build/gui/qt/sonic-pi build/linux_dist/app/build/gui/qt/sonic-pi
+mkdir -p build/linux_dist/app/build/gui/
+cp build/gui/sonic-pi build/linux_dist/app/build/gui/sonic-pi
 
 # If ImGui was built
 if [ -x build/gui/imgui/sonic-pi-imgui ]; then

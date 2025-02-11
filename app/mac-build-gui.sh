@@ -9,5 +9,4 @@ cleanup_function() {
 }
 trap cleanup_function EXIT
 
-
 "${SCRIPT_DIR}"/linux-build-gui.sh "$@"

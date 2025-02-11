@@ -62,8 +62,6 @@ fi
 
 
 
-if [ "$no_imgui" == true ]; then
-    ./vcpkg install libsndfile[core,external-libs] kissfft platform-folders reproc catch2 --triplet ${triplet[0]} --recurse
-else
-    ./vcpkg install libsndfile[core,external-libs] kissfft fmt sdl2 gl3w reproc gsl-lite concurrentqueue platform-folders catch2 --triplet ${triplet[0]} --recurse
-fi
+
+./vcpkg install libsndfile[core,external-libs] --triplet ${triplet[0]} --recurse
+

@@ -1,7 +1,27 @@
+cmake_minimum_required(VERSION 3.15)
 project(sonic-pi-api VERSION 0.0.0.1)
 
-set(API_ROOT ${CMAKE_CURRENT_LIST_DIR})
+# Define root directories
+set(API_ROOT "${CMAKE_CURRENT_LIST_DIR}")
+set(VENDOR_DIR "${API_ROOT}/vendor")
 
+set(KISSFFT_TEST OFF CACHE BOOL "Disable kissfft tests" FORCE)
+set(REPROC++ ON CACHE BOOL "Build reproc++" FORCE)
+
+
+# Include vendored dependencies that have CMake projects
+add_subdirectory("${VENDOR_DIR}/PlatformFolders-4.2.0")
+add_subdirectory("${VENDOR_DIR}/reproc-14.2.5")
+add_subdirectory("${VENDOR_DIR}/kissfft-131.1.0")
+
+# (Optional) Create interface targets for header-only libs if desired
+add_library(ghc_filesystem INTERFACE)
+target_include_directories(ghc_filesystem INTERFACE "${VENDOR_DIR}/ghc_filesystem/include")
+
+add_library(kissnet INTERFACE)
+target_include_directories(kissnet INTERFACE "${VENDOR_DIR}/kissnet-master-34b751b")
+
+# List your source files (note the fixed path for TLSF)
 set(API_SRC
     ${API_ROOT}/src/sonicpi_api.cpp
     ${API_ROOT}/src/string_utils.cpp
@@ -11,11 +31,10 @@ set(API_SRC
     ${API_ROOT}/include/api/file_utils.h
     ${API_ROOT}/include/api/logger.h
 
-    ${APP_ROOT}/external/TLSF-2.4.6/src/tlsf.c
+    ${VENDOR_DIR}/TLSF-2.4.6/src/tlsf.c
 )
 
 set(OSC_SRC
-    # Osc
     ${API_ROOT}/src/osc/osc_handler.cpp
     ${API_ROOT}/src/osc/osc_sender.cpp
     ${API_ROOT}/src/osc/osc_server.cpp
@@ -35,82 +54,63 @@ set(BUFFER_SRC
     ${API_ROOT}/src/audio/audio_processor.cpp
     ${API_ROOT}/include/api/audio/audio_processor.h
     ${API_ROOT}/include/api/audio/scope_buffer.hpp
-    ${API_ROOT}/include/api/audio/server_shm.hpp)
+    ${API_ROOT}/include/api/audio/server_shm.hpp
+)
 
+# Create the static library target
 add_library(${PROJECT_NAME} STATIC ${API_SRC} ${OSC_SRC} ${BUFFER_SRC})
 add_library(SonicPi::API ALIAS ${PROJECT_NAME})
 
-# For finding home path, etc.
-find_package(platform_folders CONFIG REQUIRED)
-
-# For running child processes
-find_package(reproc CONFIG REQUIRED)
-find_package(reproc++ CONFIG REQUIRED)
-
-if (USE_SYSTEM_LIBS)
-    find_package(PkgConfig REQUIRED)
-    pkg_check_modules(kissfft REQUIRED IMPORTED_TARGET kissfft-float)
-else()
-    find_package(kissfft CONFIG REQUIRED COMPONENTS float)
-endif()
-
+# Include directories
 target_include_directories(${PROJECT_NAME}
     PUBLIC
         ${API_ROOT}/include
-        ${APP_ROOT}/external/ghc_filesystem/include
-        ${APP_ROOT}/external/kissnet-master-34b751b
+        ${VENDOR_DIR}/ghc_filesystem/include
+        ${VENDOR_DIR}/kissnet-master-34b751b
+        ${VENDOR_DIR}/reproc-14.2.5/reproc++/include
+        ${VENDOR_DIR}/PlatformFolders-4.2.0
+        ${VENDOR_DIR}/kissnet-master-34b751b/
+        ${VENDOR_DIR}/kissfft-131.1.0/
+
     PRIVATE
-        ${APP_ROOT}/external
-        ${APP_ROOT}/external/scsynth-boost-1.74.0
-        ${APP_ROOT}/external/TLSF-2.4.6/src
+        ${VENDOR_DIR}/scsynth-boost-1.74.0
+        ${VENDOR_DIR}/TLSF-2.4.6/src
+)
 
-    )
-
+# Link to the vendored targets
 target_link_libraries(${PROJECT_NAME}
-    PRIVATE
+    PUBLIC
         sago::platform_folders
         reproc
         reproc++
+        kissfft
 )
 
-if (USE_SYSTEM_LIBS)
-    target_link_libraries(${PROJECT_NAME}
-        PRIVATE
-            PkgConfig::kissfft
-    )
-else()
-    target_link_libraries(${PROJECT_NAME}
-        PRIVATE
-            kissfft::kissfft
-    )
-endif()
-
-# Windows
-if ("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
-target_link_libraries(${PROJECT_NAME}
-    PRIVATE
-    )
-endif()
-
-# Linux
+# Platform-specific link libraries
 if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
-target_link_libraries(${PROJECT_NAME}
-    PUBLIC
-        stdc++fs
-        rt
-    PRIVATE
+    target_link_libraries(${PROJECT_NAME}
+        PUBLIC
+            stdc++fs
+            rt
     )
 endif()
 
-# Mac
+if("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
+    # Windows-specific libraries, if any
+endif()
+
 if("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
-target_link_libraries(${PROJECT_NAME}
-    PRIVATE
-    )
+    # macOS-specific libraries, if any
 endif()
 
-target_compile_definitions(${PROJECT_NAME} PUBLIC _CRT_SECURE_NO_WARNINGS _WINSOCK_DEPRECATED_NO_WARNINGS BOOST_DATE_TIME_NO_LIB WIN32_LEAN_AND_MEAN)
+target_compile_definitions(${PROJECT_NAME} PUBLIC
+    _CRT_SECURE_NO_WARNINGS
+    _WINSOCK_DEPRECATED_NO_WARNINGS
+    BOOST_DATE_TIME_NO_LIB
+    WIN32_LEAN_AND_MEAN
+)
 
-source_group ("Api" FILES ${API_SRC})
-source_group ("Api\\Osc" FILES ${OSC_SRC})
-source_group ("Api\\Audio" FILES ${BUFFER_SRC})
+# Organize source groups (optional)
+source_group("Api" FILES ${API_SRC})
+source_group("Api\\Osc" FILES ${OSC_SRC})
+source_group("Api\\Audio" FILES ${BUFFER_SRC})

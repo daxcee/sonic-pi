@@ -76,6 +76,6 @@
           <MergeRef Id="VCRedist"/>
         </Feature>
 
-        <Icon Id="StartMenuIcon.exe" SourceFile="../../app/gui/qt/build/Release/sonic-pi.exe" />
+        <Icon Id="StartMenuIcon.exe" SourceFile="../../app/gui/build/Release/sonic-pi.exe" />
     </Product>
 </Wix>

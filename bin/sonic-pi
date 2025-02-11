@@ -15,4 +15,4 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-$DIR/../app/build/gui/qt/sonic-pi
+$DIR/../app/build/gui/sonic-pi

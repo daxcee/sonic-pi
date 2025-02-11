@@ -17,6 +17,8 @@ rm -rf "${SCRIPT_DIR}"/server/native/erlang
 rm -rf "${SCRIPT_DIR}"/server/native/scsynth
 rm -rf "${SCRIPT_DIR}"/server/native/aubio_onset
 
+echo "Cleaning out vcpkg...."
+rm -rf vcpkg
 
 # Use generic linux clean script for everything else
 "${SCRIPT_DIR}"/linux-clean.sh "$@"

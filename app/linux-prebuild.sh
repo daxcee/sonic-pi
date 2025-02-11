@@ -18,9 +18,6 @@ while [ -n "$1" ]; do
         -c|--config)
             shift 2
             ;;
-        -n|--no-imgui)
-            shift
-            ;;
         -s|--system-libs|-o|--offline-build)
             system_libs=true
             shift
@@ -31,12 +28,6 @@ while [ -n "$1" ]; do
 done
 
 cd "${SCRIPT_DIR}"
-
-if [ ! "$system_libs" == true ]; then
-  "${SCRIPT_DIR}"/linux-pre-vcpkg.sh "${args[@]}"
-	export CC=gcc-12 CXX=g++-12 # Use gcc-12 as the default compiler, since gcc-13 fails to build vcpkg
-	"${SCRIPT_DIR}"/linux-pre-vcpkg.sh "${args[@]}"
-fi
 
 echo "Compiling native ruby extensions..."
 ruby "${SCRIPT_DIR}"/server/ruby/bin/compile-extensions.rb
