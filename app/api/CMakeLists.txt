@@ -1,27 +1,24 @@
 cmake_minimum_required(VERSION 3.15)
 project(sonic-pi-api VERSION 0.0.0.1)
 
-# Define root directories
-set(API_ROOT "${CMAKE_CURRENT_LIST_DIR}")
+(API_ROOT "${CMAKE_CURRENT_LIST_DIR}")
 set(VENDOR_DIR "${API_ROOT}/vendor")
 
 set(KISSFFT_TEST OFF CACHE BOOL "Disable kissfft tests" FORCE)
 set(REPROC++ ON CACHE BOOL "Build reproc++" FORCE)
 
-
-# Include vendored dependencies that have CMake projects
 add_subdirectory("${VENDOR_DIR}/PlatformFolders-4.2.0")
 add_subdirectory("${VENDOR_DIR}/reproc-14.2.5")
 add_subdirectory("${VENDOR_DIR}/kissfft-131.1.0")
 
-# (Optional) Create interface targets for header-only libs if desired
+
 add_library(ghc_filesystem INTERFACE)
 target_include_directories(ghc_filesystem INTERFACE "${VENDOR_DIR}/ghc_filesystem/include")
 
 add_library(kissnet INTERFACE)
 target_include_directories(kissnet INTERFACE "${VENDOR_DIR}/kissnet-master-34b751b")
 
-# List your source files (note the fixed path for TLSF)
+
 set(API_SRC
     ${API_ROOT}/src/sonicpi_api.cpp
     ${API_ROOT}/src/string_utils.cpp
@@ -61,6 +58,29 @@ set(BUFFER_SRC
 add_library(${PROJECT_NAME} STATIC ${API_SRC} ${OSC_SRC} ${BUFFER_SRC})
 add_library(SonicPi::API ALIAS ${PROJECT_NAME})
 
+if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
+    # Look for Boost version 1.74 or higher. Add any components you need.
+    find_package(Boost 1.74 REQUIRED COMPONENTS filesystem system thread)
+
+    if(Boost_FOUND)
+        message(STATUS "Found Boost version ${Boost_VERSION}")
+        target_include_directories(${PROJECT_NAME}
+            PRIVATE ${Boost_INCLUDE_DIRS}
+        )
+        target_link_libraries(${PROJECT_NAME}
+            PRIVATE ${Boost_LIBRARIES}
+        )
+    else()
+        message(FATAL_ERROR "Boost not found")
+    endif()
+else()
+    # For non-Linux platforms, use the vendored boost copy.
+    target_include_directories(${PROJECT_NAME}
+        PRIVATE ${VENDOR_DIR}/scsynth-boost-1.74.0
+    )
+endif()
+
+
 # Include directories
 target_include_directories(${PROJECT_NAME}
     PUBLIC
@@ -73,7 +93,6 @@ target_include_directories(${PROJECT_NAME}
         ${VENDOR_DIR}/kissfft-131.1.0/
 
     PRIVATE
-        ${VENDOR_DIR}/scsynth-boost-1.74.0
         ${VENDOR_DIR}/TLSF-2.4.6/src
 )
 
