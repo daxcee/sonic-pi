@@ -11,17 +11,12 @@ cleanup_function() {
 trap cleanup_function EXIT
 
 args=("$@")
-no_imgui=false
 
 # extract options and their arguments into variables.
 while [ -n "$1" ]; do
     case "$1" in
         -c|--config)
             shift 2
-            ;;
-        -n|--no-imgui)
-            no_imgui=true
-            shift
             ;;
         -s|--system-libs|-o|--offline-build)
             shift
@@ -30,8 +25,6 @@ while [ -n "$1" ]; do
         *) echo "Invalid argument: $1" ; exit 1 ;;
     esac
 done
-
-
 
 cd "${SCRIPT_DIR}"
 
@@ -52,16 +45,12 @@ fi
 
 cd vcpkg
 
-
 if [[ $(uname -m) == 'arm64' ]] || [ "$SONIC_PI_BUILD_TARGET" == 'arm64' ]
 then
   triplet=(arm64-osx)
 else
   triplet=(x64-osx)
 fi
-
-
-
 
 ./vcpkg install libsndfile[core,external-libs] --triplet ${triplet[0]} --recurse
 
