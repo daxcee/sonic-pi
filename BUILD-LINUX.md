@@ -60,7 +60,7 @@ Note: please make sure that you have gcc12 installed. Compiling vcpkg dependenci
 ### 1.1 Debian
 The following is a rough list of Debian packages that are needed that can serve as a starting position:
 ```bash
-sudo apt-get install -y build-essential git libssl-dev ruby-dev elixir erlang-dev erlang-xmerl qt6-tools-dev qt6-tools-dev-tools libqt6svg6-dev libqt6opengl6-dev supercollider-server sc3-plugins-server alsa-utils  libasound2-dev cmake ninja-build pipewire-jack libspa-0.2-jack qt6-wayland libwayland-dev libxkbcommon-dev libegl1-mesa-dev libx11-dev libxft-dev libxext-dev qpwgraph compton
+sudo apt-get install -y build-essential git libssl-dev ruby-dev elixir erlang-dev erlang-xmerl qt6-tools-dev qt6-tools-dev-tools libqt6svg6-dev libqt6opengl6-dev supercollider-server sc3-plugins-server alsa-utils  libasound2-dev cmake ninja-build pipewire-jack libspa-0.2-jack qt6-wayland libwayland-dev libxkbcommon-dev libegl1-mesa-dev libx11-dev libxft-dev libxext-dev qpwgraph compton m4 libaubio-dev libpng-dev libboost-all-dev
 ```
 
 *Notes:*
@@ -68,7 +68,7 @@ sudo apt-get install -y build-essential git libssl-dev ruby-dev elixir erlang-de
 1. Check the version of `Qt` after package installation.
 
 * Check your current Qt version with `qmake --version`.
-*  If it is too old (see dependency list above) you should find a way to update `Qt` before going to the build step.
+* If it is too old (see dependency list above) you should find a way to update `Qt` before going to the build step.
 
 3. The main repositories may not have a recent enough version of
 Elixir. If this is the case, you can install it via **one** of the

@@ -227,13 +227,13 @@ win-build-all.bat
 Finally, you can run your newly compiled Sonic Pi from the `build` directory:
 
 ```
-gui\qt\Release\sonic-pi.exe
+gui\Release\sonic-pi.exe
 ```
 
 Or from anywhere using the full path:
 
 ```
-C:\dev\sonic-pi\app\build\gui\qt\Release\sonic-pi.exe
+C:\dev\sonic-pi\app\build\gui\Release\sonic-pi.exe
 ```
 
 
