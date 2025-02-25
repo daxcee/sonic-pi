@@ -9,5 +9,5 @@ cleanup_function() {
 }
 trap cleanup_function EXIT
 
-VCPKG_FORCE_SYSTEM_BINARIES=1 CC="$(type -p clang)" CXX="$(type -p clang++)" "${SCRIPT_DIR}"/linux-prebuild.sh "$@"
+CC="$(type -p clang)" CXX="$(type -p clang++)" "${SCRIPT_DIR}"/linux-prebuild.sh "$@"
 
