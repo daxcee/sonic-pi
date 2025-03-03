@@ -16,7 +16,7 @@ cd build
 @REM explicitly, but as we also pass it in here it will be used by the cmake
 @REM build files for app/external
 
-cmake -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=%CONFIG% ..\
+cmake -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=%CONFIG% -DKISSFFT_TOOLS=OFF -DKISSFFT_PKGCONFIG=OFF ..\
 if %ERRORLEVEL% neq 0 (
     cd %WORKING_DIR%
     exit /b %ERRORLEVEL%

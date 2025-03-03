@@ -1,21 +1,22 @@
 cmake_minimum_required(VERSION 3.13)
 set(APP_ROOT ${CMAKE_CURRENT_LIST_DIR})
 
+# Different triplet for windows
+if (WIN32)
+    set(VCPKG_TARGET_TRIPLET x64-windows-static-md CACHE STRING "triplet")
+endif()
+
 # vcpkg toolchain - Must be declared before project
 
-if ((WIN32 OR APPLE) AND (NOT USE_SYSTEM_LIBS))
+if (WIN32 OR APPLE)
   set(CMAKE_TOOLCHAIN_FILE ${APP_ROOT}/vcpkg/scripts/buildsystems/vcpkg.cmake CACHE STRING "Vcpkg toolchain file")
 endif()
 
 project(SonicPi)
 
-
 message(STATUS "CMakeLists: Sonic Pi")
 
-# Different triplet for windows
-if (WIN32)
-    set(VCPKG_TARGET_TRIPLET x64-windows-static-md CACHE STRING "triplet")
-endif()
+
 
 # Sonic Pi Requires a C++ 17 Compiler to build it
 set(CMAKE_CXX_STANDARD 17)

@@ -11,7 +11,6 @@ trap cleanup_function EXIT
 
 args=("$@")
 config="Release"
-system_libs=false
 
 # extract options and their arguments into variables.
 while [ -n "$1" ]; do
@@ -40,5 +39,5 @@ mkdir -p "${SCRIPT_DIR}/build"
 echo "Generating makefiles..."
 cd "${SCRIPT_DIR}/build"
 
-cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="$config" -DUSE_SYSTEM_LIBS=ON ..
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="$config"
 

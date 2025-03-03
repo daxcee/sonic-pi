@@ -4,7 +4,7 @@ set(APP_ROOT ${CMAKE_CURRENT_LIST_DIR})
 
 # vcpkg toolchain - Must be declared before project
 
-if ((WIN32 OR APPLE) AND (NOT USE_SYSTEM_LIBS))
+if (WIN32 OR APPLE)
   set(CMAKE_TOOLCHAIN_FILE ${APP_ROOT}/../vcpkg/scripts/buildsystems/vcpkg.cmake CACHE STRING "Vcpkg toolchain file")
 endif()
 
@@ -12,9 +12,6 @@ message(STATUS "Externals Builder")
 
 project(ExternalsBuilder)
 
-option(USE_SYSTEM_LIBS "Use system libraries instead of bundled libraries when building" OFF)
-
-message(STATUS "USE_SYSTEM_LIBS: ${USE_SYSTEM_LIBS}")
 
 # Set default build type for sp_midi and sp_link
 if (NOT CMAKE_BUILD_TYPE)
@@ -36,7 +33,7 @@ ExternalProject_Add(sp_midi
     CMAKE_ARGS
         -DCMAKE_INSTALL_PREFIX=${CMAKE_CURRENT_SOURCE_DIR}/../server/beam/tau/priv
         -DCMAKE_OSX_DEPLOYMENT_TARGET=${CMAKE_OSX_DEPLOYMENT_TARGET}
-        -DUSE_SYSTEM_RTMIDI=${USE_SYSTEM_LIBS}
+
     BUILD_COMMAND ${CMAKE_COMMAND} --build . --config ${CMAKE_BUILD_TYPE}
     )
 
@@ -50,7 +47,7 @@ ExternalProject_Add(sp_link
     BUILD_COMMAND ${CMAKE_COMMAND} --build . --config ${CMAKE_BUILD_TYPE}
     )
 
-if(NOT USE_SYSTEM_LIBS)
+if (WIN32 OR APPLE)
     find_package(SndFile CONFIG REQUIRED)
 
     ExternalProject_Add(aubio-project
@@ -71,13 +68,7 @@ endif()
 add_executable(aubio_onset
     ${CMAKE_CURRENT_LIST_DIR}/aubio/aubioonset.c
     ${CMAKE_CURRENT_LIST_DIR}/aubio/utils.c)
-if(USE_SYSTEM_LIBS)
-    find_package(PkgConfig REQUIRED)
-    pkg_check_modules(aubio REQUIRED IMPORTED_TARGET aubio)
-    target_link_libraries(aubio_onset
-        PRIVATE
-        PkgConfig::aubio)
-else()
+if (WIN32 OR APPLE)
     add_dependencies(aubio_onset aubio-project)
     target_include_directories(aubio_onset PRIVATE ${CMAKE_BINARY_DIR}/aubio-package/include)
     target_link_directories(aubio_onset PRIVATE ${CMAKE_BINARY_DIR}/aubio-package/lib)
@@ -85,7 +76,14 @@ else()
         PRIVATE
         aubio
         SndFile::sndfile)
+else()
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(aubio REQUIRED IMPORTED_TARGET aubio)
+    target_link_libraries(aubio_onset
+        PRIVATE
+        PkgConfig::aubio)
 endif()
+
 if(UNIX)
     target_link_libraries(aubio_onset
         PRIVATE

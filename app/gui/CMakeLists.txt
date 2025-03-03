@@ -60,13 +60,12 @@ endif()
 
 find_package(Threads REQUIRED)
 
-if(USE_SYSTEM_LIBS)
+if(NOT (APPLE OR WIN32))
   # Try to find the system-installed QScintilla without immediately failing
   find_package(QScintilla QUIET)
 endif()
 
-# If QScintilla wasn’t found (either because USE_SYSTEM_LIBS wasn’t set or the system install is missing),
-# use the vendored version.
+# If QScintilla wasn’t found use the vendored version.
 if(NOT QScintilla_FOUND)
   message(STATUS "System QScintilla not found. Falling back to bundled QScintilla.")
   add_subdirectory(QScintilla_src-2.14.1)
@@ -202,9 +201,8 @@ SET(TS_FILES
     ${QTAPP_ROOT}/lang/sonic-pi_zh.ts
 )
 
-# Enable tracy profiler on debug and rel with debug builds
 if(WIN32)
-    SET (SOURCES ${SOURCES} ${APP_ROOT}/external/tracy/TracyClient.cpp)
+  # do nothing
 elseif(APPLE)
   SET (SOURCES ${SOURCES} ${QTAPP_ROOT}/platform/macos.mm)
   SET (SOURCES ${SOURCES} ${QTAPP_ROOT}/platform/macos.h)
@@ -359,8 +357,6 @@ endif()
 if(WIN32)
     # Workaround Qt + MSVC 19 compile issue in release build.
     target_compile_options(${APP_NAME} PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/wd4005 /W3 /D_CRT_SECURE_NO_WARNINGS /D_WINSOCK_DEPRECATED_NO_WARNINGS /DBOOST_DATE_TIME_NO_LIB>)
-    target_compile_options(${APP_NAME} PRIVATE "$<$<CONFIG:DEBUG>:-DTRACY_ENABLE=1>")
-    target_compile_options(${APP_NAME} PRIVATE "$<$<CONFIG:RELWITHDEBINFO>:-DTRACY_ENABLE=1>")
 elseif(${CMAKE_SYSTEM_NAME} MATCHES Linux)
     # Link librt
     target_link_libraries(${APP_NAME} PRIVATE rt)
@@ -372,6 +368,12 @@ if(WIN32)
     set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP true)
     include(InstallRequiredSystemLibraries)
     file(COPY ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/Release)
+
+    # Copy kissfft.dll from the API build directory to the GUI executable directory
+    add_custom_command(TARGET ${APP_NAME} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            "${CMAKE_SOURCE_DIR}/build/api/vendor/kissfft-131.1.0/Release/kissfft-float.dll"
+            $<TARGET_FILE_DIR:${APP_NAME}>)
 
     # Run winddeployqt if it can be found, to ensure installed dependencies
     add_custom_command(TARGET ${APP_NAME} POST_BUILD

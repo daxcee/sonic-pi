@@ -12,10 +12,6 @@ message(STATUS "External NIF Builder")
 
 project(ExternalsBuilder)
 
-option(USE_SYSTEM_LIBS "Use system libraries instead of bundled libraries when building" OFF)
-
-message(STATUS "USE_SYSTEM_LIBS: ${USE_SYSTEM_LIBS}")
-
 include(GNUInstallDirs)
 include(ExternalProject)
 
