@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.13)
 
 message(STATUS "CMakeLists: Sonic Pi Qt GUI")
 
@@ -28,10 +28,10 @@ if((${BUILD_32BIT}) AND (DEFINED ENV{QT_INSTALL_LOCATION32}))
 elseif(DEFINED ENV{QT_INSTALL_LOCATION})
   message(STATUS "Setting prefix to user-defined Qt install location: $ENV{QT_INSTALL_LOCATION}")
   set(CMAKE_PREFIX_PATH $ENV{QT_INSTALL_LOCATION})
-elseif(APPLE AND EXISTS /usr/local/opt/qt@5)
-  # Homebrew installs Qt into/usr/local/qt5
-  message(STATUS "Setting prefix to Homebrew's Qt install location: /usr/local/opt/qt@5")
-  set(CMAKE_PREFIX_PATH /usr/local/opt/qt@5)
+elseif(APPLE AND EXISTS /opt/homebrew/opt/qt@6)
+  # Homebrew installs Qt to /opt/homebrew/opt/qt@6
+  message(STATUS "Setting prefix to Homebrew's Qt install location: /opt/homebrew/opt/qt@6")
+  set(CMAKE_PREFIX_PATH /opt/homebrew/opt/qt@6)
 endif()
 
 # Qt Setup
@@ -44,18 +44,13 @@ set(QT_TOOLS_DIR ${CMAKE_PREFIX_PATH}/bin)
 set_property(GLOBAL PROPERTY AUTOMOC_FOLDER Automoc)
 set_property(GLOBAL PROPERTY AUTOGEN_TARGETS_FOLDER Automoc)
 
-find_package(Qt6 QUIET)
+find_package(Qt6)
 
 if(Qt6_FOUND AND WITH_QT_GUI_WEBENGINE)
   find_package(Qt6 COMPONENTS Core Widgets Gui Concurrent Network OpenGLWidgets PrintSupport Xml Svg LinguistTools WebEngineWidgets REQUIRED)
   add_compile_definitions(WITH_WEBENGINE)
 elseif(Qt6_FOUND)
   find_package(Qt6 COMPONENTS Core Widgets Gui Concurrent Network OpenGLWidgets PrintSupport Xml Svg LinguistTools REQUIRED)
-elseif(WITH_QT_GUI_WEBENGINE)
-  find_package(Qt5 COMPONENTS Core Widgets Gui Concurrent Network OpenGL PrintSupport Xml Svg LinguistTools WebEngineWidgets REQUIRED)
-  add_compile_definitions(WITH_WEBENGINE)
-else()
-  find_package(Qt5 COMPONENTS Core Widgets Gui Concurrent Network OpenGL PrintSupport Xml Svg LinguistTools REQUIRED)
 endif()
 
 find_package(Threads REQUIRED)
@@ -221,18 +216,15 @@ endif()
 set_source_files_properties(${TS_FILES} PROPERTIES OUTPUT_LOCATION ${QTAPP_ROOT}/lang)
 
 
-if (Qt6_FOUND)
-  if (${Qt6Core_VERSION} VERSION_LESS "6.7.0")
-    qt_add_lrelease(${APP_NAME} TS_FILES ${TS_FILES})
-  else()
-    # Qt 6.7.0 and later...
-    set(LRELEASE_TARGET "${APP_NAME}_lrelease")
-    qt_add_lrelease(TS_FILES ${TS_FILES} LRELEASE_TARGET ${LRELEASE_TARGET})
-  endif()
+
+if (${Qt6Core_VERSION} VERSION_LESS "6.7.0")
+  qt_add_lrelease(${APP_NAME} TS_FILES ${TS_FILES})
 else()
-  qt5_add_translation(QM_FILES ${TS_FILES})
-  set_property(SOURCE ${APP_NAME} APPEND PROPERTY OBJECT_DEPENDS ${QM_FILES})
+  # Qt 6.7.0 and later...
+  set(LRELEASE_TARGET "${APP_NAME}_lrelease")
+  qt_add_lrelease(TS_FILES ${TS_FILES} LRELEASE_TARGET ${LRELEASE_TARGET})
 endif()
+
 
 
 if (APPLE)
@@ -319,37 +311,21 @@ target_link_libraries(${APP_NAME}
     Threads::Threads
     SingleApplication::SingleApplication)
 
-if(Qt5_FOUND)
-  target_link_libraries(${APP_NAME}
-  PRIVATE
-  Qt5::Core
-  Qt5::Gui
-  Qt5::Widgets
-  Qt5::OpenGL
-  Qt5::Concurrent
-  Qt5::Network)
-else()
-  target_link_libraries(${APP_NAME}
-  PRIVATE
-  Qt::Core
-  Qt::Gui
-  Qt::Widgets
-  Qt::OpenGL
-  Qt::Concurrent
-  Qt::Network
-  Qt::OpenGLWidgets)
-endif()
+target_link_libraries(${APP_NAME}
+    PRIVATE
+    Qt::Core
+    Qt::Gui
+    Qt::Widgets
+    Qt::OpenGL
+    Qt::Concurrent
+    Qt::Network
+    Qt::OpenGLWidgets)
+
 
 if(WITH_QT_GUI_WEBENGINE)
-  if(Qt5_FOUND)
-    target_link_libraries(${APP_NAME}
-    PRIVATE
-    Qt5::WebEngineWidgets)
-  else()
     target_link_libraries(${APP_NAME}
     PRIVATE
     Qt::WebEngineWidgets)
-  endif()
 endif()
 
 
