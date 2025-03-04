@@ -6,134 +6,134 @@
     <message>
         <location filename="../mainwindow.cpp" line="481"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>விருப்பத்தேர்வுகள்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="615"/>
         <source>Log</source>
-        <translation type="unfinished"></translation>
+        <translation>பதிவு</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="204"/>
         <location filename="../mainwindow.cpp" line="4372"/>
         <location filename="../mainwindow.cpp" line="4400"/>
         <source>Sonic Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>சோனிக் பை</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1855"/>
         <source>Running Code...</source>
         <oldsource>Running Code....</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>குறியீடு இயங்கும் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1874"/>
         <source>Beautifying...</source>
         <oldsource>Beautifying....</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>அழகுபடுத்துதல் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1900"/>
         <source>Reloading...</source>
         <oldsource>Reloading....</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>மீண்டும் ஏற்றுதல் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1932"/>
         <source>Enabling Mixer HPF...</source>
         <oldsource>Enabling Mixer HPF....</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>மிக்சர் HPF ஐ இயக்குகிறது ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1941"/>
         <source>Disabling Mixer HPF...</source>
         <oldsource>Disabling Mixer HPF....</oldsource>
-        <translation type="unfinished"></translation>
+        <translation>மிக்சர் HPF ஐ முடக்குதல் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="353"/>
         <source>Welcome to Sonic Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>சோனிக் பைக்கு வருக</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1083"/>
         <source>Indenting selection...</source>
-        <translation type="unfinished"></translation>
+        <translation>உள்தள்ளல் தேர்வு ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1089"/>
         <source>Indenting line...</source>
-        <translation type="unfinished"></translation>
+        <translation>இன்டென்டிங் லைன் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1301"/>
         <source>Toggle selection comment...</source>
-        <translation type="unfinished"></translation>
+        <translation>தேர்வு கருத்தை மாற்றவும் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="621"/>
         <source>Cues</source>
-        <translation type="unfinished"></translation>
+        <translation>குறிப்புகள்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="871"/>
         <source>Full screen mode off.</source>
-        <translation type="unfinished"></translation>
+        <translation>முழு திரை பயன்முறை முடக்கப்பட்டுள்ளது.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1307"/>
         <source>Toggle line comment...</source>
-        <translation type="unfinished"></translation>
+        <translation>வரி கருத்தை மாற்றவும் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4760"/>
         <source>Enabling MIDI input...</source>
-        <translation type="unfinished"></translation>
+        <translation>மிடி உள்ளீட்டை செயல்படுத்துகிறது ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4768"/>
         <source>Disabling MIDI input...</source>
-        <translation type="unfinished"></translation>
+        <translation>மிடி உள்ளீட்டை முடக்குதல் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4786"/>
         <source>No connected input devices</source>
-        <translation type="unfinished"></translation>
+        <translation>இணைக்கப்பட்ட உள்ளீட்டு சாதனங்கள் இல்லை</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4787"/>
         <source>No connected output devices</source>
-        <translation type="unfinished"></translation>
+        <translation>இணைக்கப்பட்ட வெளியீட்டு சாதனங்கள் இல்லை</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4732"/>
         <source>Visit http://sonic-pi.net to download new version</source>
-        <translation type="unfinished"></translation>
+        <translation>புதிய பதிப்பைப் பதிவிறக்க http://sonic-pi.net ஐப் பார்வையிடவும்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4815"/>
         <source>Disabling OSC cue port...</source>
-        <translation type="unfinished"></translation>
+        <translation>OSC CUE போர்ட்டை முடக்குதல் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4829"/>
         <source>Enabling external OSC cue port...</source>
-        <translation type="unfinished"></translation>
+        <translation>வெளிப்புற OSC கியூ போர்ட்டை செயல்படுத்துகிறது ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4843"/>
         <source>Enabling internal OSC cue port...</source>
-        <translation type="unfinished"></translation>
+        <translation>உள் OSC கியூ போர்ட்டை செயல்படுத்துகிறது ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4895"/>
         <source>Connected MIDI inputs</source>
-        <translation type="unfinished"></translation>
+        <translation>இணைக்கப்பட்ட மிடி உள்ளீடுகள்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4916"/>
         <source>Connected MIDI outputs</source>
-        <translation type="unfinished"></translation>
+        <translation>இணைக்கப்பட்ட மிடி வெளியீடுகள்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1706"/>
@@ -141,55 +141,55 @@
         <location filename="../mainwindow.cpp" line="1724"/>
         <location filename="../mainwindow.cpp" line="1726"/>
         <source>Buffer files</source>
-        <translation type="unfinished"></translation>
+        <translation>இடையக கோப்புகள்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="627"/>
         <source>Link Metronome &amp; Global Time Warp</source>
-        <translation type="unfinished"></translation>
+        <translation>இணைப்பு மெட்ரோனோம் &amp; உலகளாவிய டைம் வார்ப்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1708"/>
         <source>Load Sonic Pi Buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>சோனிக் பை இடையகத்தை ஏற்றவும்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1708"/>
         <location filename="../mainwindow.cpp" line="1726"/>
         <source>Text files</source>
-        <translation type="unfinished"></translation>
+        <translation>உரை கோப்புகள்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1708"/>
         <location filename="../mainwindow.cpp" line="1726"/>
         <source>Ruby files</source>
-        <translation type="unfinished"></translation>
+        <translation>ரூபி கோப்புகள்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1708"/>
         <location filename="../mainwindow.cpp" line="1726"/>
         <source>All files</source>
-        <translation type="unfinished"></translation>
+        <translation>அனைத்து கோப்புகள்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2303"/>
         <source>Log Auto Scroll on...</source>
-        <translation type="unfinished"></translation>
+        <translation>லாக் ஆட்டோ ச்க்ரோல் ஆன் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2307"/>
         <source>Log Auto Scroll off...</source>
-        <translation type="unfinished"></translation>
+        <translation>லாக் ஆட்டோ ச்க்ரோல் ஆஃப் ...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2928"/>
         <source>Run the code in the current buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>தற்போதைய இடையகத்தில் குறியீட்டை இயக்கவும்</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3264"/>
         <source>Load</source>
-        <translation type="unfinished"></translation>
+        <translation>சுமை</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2932"/>
