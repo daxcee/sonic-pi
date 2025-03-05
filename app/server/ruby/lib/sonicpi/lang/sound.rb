@@ -1814,31 +1814,9 @@ play 60 # plays note 60 with an amp of 0.5, pan of -1 and defaults for rest of a
               else
                 kill_delay = args_h[:kill_delay] || 1
               end
-
-              subthreads.map do |st|
-                Thread.new do
-                  __system_thread_locals.set_local :sonic_pi_local_thread_group, "wfx subthread waiter for #{fx_name} #{new_bus}"
-                  subthread_completed_or_moved = Promise.new
-                  wt1 = Thread.new do
-                    __system_thread_locals.set_local :sonic_pi_local_thread_group, "wfx join waiter for #{fx_name} #{new_bus}"
-                    st.join
-                    __system_thread_locals(st).get(:sonic_pi_local_spider_subthread_empty).get
-                    subthread_completed_or_moved.deliver! true
-                  end
-                  wt2 = Thread.new do
-                    __system_thread_locals.set_local :sonic_pi_local_thread_group, "wfx move waiter for #{fx_name} #{new_bus}"
-                    p = __system_thread_locals(st).get(:sonic_pi_local_spider_thread_moved)
-                    tracker_from_moved_thread = p.get
-                    __system_thread_locals(st).get(:sonic_pi_local_spider_thread_moved_ack).deliver! true, false
-                    tracker_from_moved_thread.get
-                    subthread_completed_or_moved.deliver! true
-                  end
-                  subthread_completed_or_moved.get
-                  wt1.kill
-                  wt2.kill
-                end
-              end.each do |jt|
-                jt.join
+              subthreads.each do |st|
+                st.join
+                __system_thread_locals(st).get(:sonic_pi_local_spider_subthread_empty).get
               end
               tracker.block_until_finished
               Kernel.sleep(kill_delay)
@@ -1847,6 +1825,8 @@ play 60 # plays note 60 with an amp of 0.5, pan of -1 and defaults for rest of a
 
             gc_init_completed.deliver! true
           end ## end gc collection thread definition
+
+
         end
 
         ## Trigger new fx synth (placing it in the fx group) and

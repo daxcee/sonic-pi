@@ -38,75 +38,12 @@
 
 ## version 5 'Live Loop'
 
-This new release of Sonic Pi introduces a breaking change in the interaction between `live_loop`s and `with_fx` that significantly improve using them together in a live performance. There has also been a significant overhaul of the shortcuts in the GUI to allow you to change them. You can now choose between the default (called Emacs Live), Windows or Mac modes as well as customise them yourself. There's also a wonderful new function for working with tuplets designed by Dago Sondervan.
-
-Before we get to the full breakdown list of all the changes, let's take a moment to explore the breaking change with `live_loop` and `with_f`:
-
-### Live Loop Now Behaves like Live Audio
-
-Consider this code:
-
-```ruby
-with_fx :reverb do
-  live_audio :moog
-end
-```
-
-When you run this code, the audio from the sound card is played through reverb. Now, what if you're in the middle of a performance and wanted to change it to distortion? Easy, you just change the code to this and hit run again:
-
-```ruby
-with_fx :distortion do
-  live_audio :moog
-end
-```
-
-The live_audio magically moves out of the Reverb context and into the Distortion. There's no need to stop and start the code - it all happens live and is completely seemless. As an added bonus, behind the scenes the Reverb figures that the live_audio has moved on and automatically garbage collects itself freeing the resources. The crowd dances to the distorted Moog synth.
-
-Now consider this:
-
-```ruby
-with_fx :reverb do
-  live_loop :foo do
-    play 70
-    sleep 0.5
-  end
-end
-```
-
-As with the live_audio - this works as expected, the sound from the live loop is played through Reverb. However, if you changed the reverb to Distortion and hit run again, it did not change the FX over to the Distortion. The live loop wass stuck in the Reverb FX it was originally created in. Forever. This wasn't ideal and confused a lot of people.
-
-It unfortunately stayed like this for many years because it was an incredibly hard problem to fix due to the architecture of Sonic Pi's internals. It required deep changes to the thread management system, the live loop implementation, and with_fx and its auto FX garbage collection system. Each of these is tricky enough to work on independently - but the intersection of them all is a thing of nightmares.
-
-Well, now more because the work is done and this behaves like live loop. Swap the code to this, hit the run whilst it's still playing and you'll hear the `:foo` `live_loop` played through distortion:
-
-```ruby
-with_fx :distortion do
-  live_loop :foo do
-    play 70
-    sleep 0.5
-  end
-end
-```
-
-You can even change the FX to one with a control parameter and it will still just work:
-
-```ruby
-with_fx :lpf do |fx|
-  live_loop :foo do
-     control fx, cutoff: rrand(70, 120)
-     synth :square, note: :e3, release: 0.2
-     sleep 0.25
-  end
-end
-```
-
-When you're working with fast spinning `live_loop`s it's now generally better to put your FX outside the `live_loop` as it's much more efficient. You just have one FX running the whole time, rather than creating a new FX every time the loop spins round.
+This new release of Sonic Pi introduces a significant overhaul of the shortcuts in the GUI to allow you to change them. You can now choose between the default (called Emacs Live), Windows or Mac modes as well as customise them yourself. There's also a wonderful new function for working with tuplets designed by Dago Sondervan.
 
 ### GUI
 * Complete overhaul of the shortcut system.
 
 ### Improvements
-* `live_loop` now moves to new FX contexts similar to `live_audio`. You can therefore now use `with_fx` both within and outside of `live_loop` and be able to change things live in a performance.
 * Where supported, you can now indepedently specify different input and output sound cards in the `audio-settings.toml` config file. This is done with the new options `input_sound_card_name = ""` and `output_sound_card_name = ""`. Note, you still have to ensure that the sample rate is the same for input and output.
 * Incoming OSC bundles are now supported. Timestamps are ignored (if OSC scheduling is a commonly requested feature this could be added in the future). This increases compatability with software which exlusively sends OSC in budle format such as TouchDesigner.
 
@@ -117,7 +54,6 @@ When you're working with fast spinning `live_loop`s it's now generally better to
 ### Samples
 * Two new ride cymbals `:ride_tri` and `ride_via`.
 * New hi-hat `:hat_len`.
-
 
 ### Translations
 

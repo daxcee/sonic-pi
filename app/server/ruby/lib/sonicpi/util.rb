@@ -221,7 +221,6 @@ module SonicPi
       rescue
         nil
       end
-
     end
 
     def log_raw(s)
