@@ -19,16 +19,54 @@
 #include "model/sonicpitheme.h"
 #include <QScrollBar>
 
-SonicPiLog::SonicPiLog(QWidget *parent) : QPlainTextEdit(parent)
+SonicPiLog::SonicPiLog(QWidget* parent)
+    : QPlainTextEdit(parent)
 {
-  forceScroll = true;
+    forceScroll = true;
+    zoomLevel = 0;
+}
+
+void SonicPiLog::zoomIn()
+{
+    setZoomLevel(zoomLevel + 1);
+}
+
+void SonicPiLog::zoomOut()
+{
+    setZoomLevel(zoomLevel - 1);
+}
+
+void SonicPiLog::setZoomLevel(int zoom)
+{
+    const int MIN_ZOOM = -10;
+    const int MAX_ZOOM = 10;
+
+    // Clamp the desired zoom to your range
+    int targetZoom = std::clamp(zoom, MIN_ZOOM, MAX_ZOOM);
+
+    int delta = targetZoom - zoomLevel;
+
+    if (delta > 0)
+    {
+        QPlainTextEdit::zoomIn(delta);
+    }
+    else if (delta < 0)
+    {
+
+        QPlainTextEdit::zoomOut(-delta);
+    }
+    zoomLevel = targetZoom;
+}
+
+int SonicPiLog::currentZoomLevel() const
+{
+    return zoomLevel;
 }
 
 void SonicPiLog::forceScrollDown(bool force)
 {
-  forceScroll = force;
+    forceScroll = force;
 }
-
 
 void SonicPiLog::setTextColor(QColor c)
 {

@@ -714,6 +714,9 @@ void MainWindow::setupWindowStructure()
     mainWidget->setObjectName("mainWidget");
 
     setCentralWidget(mainWidget);
+
+    incomingPane->setZoomLevel(gui_settings->value("prefs/cue-zoom", 0).toInt());
+    outputPane->setZoomLevel(gui_settings->value("prefs/log-zoom", 0).toInt());
 }
 
 void MainWindow::docLinkClicked(const QUrl& url)
@@ -4344,7 +4347,8 @@ void MainWindow::writeSettings()
     gui_settings->setValue("prefs/show-log", piSettings->show_log);
     gui_settings->setValue("prefs/show-context", piSettings->show_context);
     gui_settings->setValue("prefs/shortcut-mode", piSettings->shortcut_mode);
-
+    gui_settings->setValue("prefs/log-zoom", outputPane->currentZoomLevel());
+    gui_settings->setValue("prefs/cue-zoom", incomingPane->currentZoomLevel());
     for (auto name : piSettings->scope_names)
     {
         gui_settings->setValue("prefs/scope/show-" + name.toLower(), piSettings->isScopeActive(name));

@@ -24,6 +24,7 @@ class SonicPiLog : public QPlainTextEdit
 public:
     explicit SonicPiLog(QWidget *parent = 0);
     bool forceScroll;
+    int zoomLevel;
 
     struct Message
     {
@@ -51,6 +52,11 @@ public slots:
     void handleMultiMessage(SonicPiLog::MultiMessage mm);
     void forceScrollDown(bool force);
     void appendPlainText(QString text);
+    void zoomIn();
+    void zoomOut();
+    void setZoomLevel(int zoom);
+    int currentZoomLevel() const;
+
 
 protected:
 };
