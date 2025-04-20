@@ -475,7 +475,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="3483"/>
         <source>Link Connect</source>
-        <translation>இணைப்பு இணைப்பு</translation>
+        <translation>இணைப்பு இணை</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2988"/>
@@ -1575,7 +1575,7 @@ Get Sonic Pi %1</source>
     <message>
         <location filename="../mainwindow.cpp" line="5257"/>
         <source>Unfortunately it appears you have set the SONIC_PI_HOME environment variable to a directory you don&apos;t have permission to write to:</source>
-        <translation>துரதிர்ச்டவசமாக நீங்கள் சோனிக்_பிஐ_ஓம் சூழல் மாறியை ஒரு கோப்பகத்திற்கு அமைத்துள்ளீர்கள் என்று தோன்றுகிறது.</translation>
+        <translation>துரதிர்ச்டவசமாக நீங்கள் சோனிக்_பிஐ_ஓம் சூழல் மாறியை ஒரு கோப்பகத்திற்கு அமைத்துள்ளீர்கள் என்று தோன்றுகிறது:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3248"/>
