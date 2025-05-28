@@ -17,12 +17,20 @@ cd build
 @REM explicitly, but as we also pass it in here it will be used by the cmake
 @REM build files for app/external
 
+set "VCPKG_TRIPLET=x64-windows-static-md"
 set "VCPKG_ROOT=%SCRIPT_DIR%vcpkg"
+set "SNDFILE_DIR=%VCPKG_ROOT%\installed\%VCPKG_TRIPLET%\share\libsndfile"
 set "VCPKG_TOOLCHAIN=%VCPKG_ROOT%\scripts\buildsystems\vcpkg.cmake"
 set "VCPKG_TRIPLET=x64-windows-static-md"
+set "VCPKG_FORCE_SYSTEM_BINARIES=1"
 
-cmake -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=%CONFIG%  -DCMAKE_TOOLCHAIN_FILE="%VCPKG_TOOLCHAIN%"  -DVCPKG_TARGET_TRIPLET=%VCPKG_TRIPLET% -DKISSFFT_TOOLS=OFF -DKISSFFT_PKGCONFIG=OFF ..\
-
+cmake -G "Visual Studio 17 2022" -A x64 ^
+      -DCMAKE_BUILD_TYPE=%CONFIG% ^
+      -DCMAKE_TOOLCHAIN_FILE="%VCPKG_TOOLCHAIN%" ^
+      -DVCPKG_TARGET_TRIPLET=%VCPKG_TRIPLET% ^
+      -DKISSFFT_TOOLS=OFF -DKISSFFT_PKGCONFIG=OFF ^
+      -DSndFile_DIR="%SNDFILE_DIR%" ^
+      ..\
 
 if %ERRORLEVEL% neq 0 (
     cd %WORKING_DIR%
