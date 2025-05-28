@@ -47,10 +47,10 @@ cd vcpkg
 
 if [[ $(uname -m) == 'arm64' ]] || [ "$SONIC_PI_BUILD_TARGET" == 'arm64' ]
 then
-  triplet=(arm64-osx)
+  TRIPLET=arm64-osx
 else
-  triplet=(x64-osx)
+  TRIPLET=x64-osx
 fi
 
-./vcpkg install libsndfile[core,external-libs] --triplet ${triplet[0]} --recurse
+./vcpkg install libsndfile[core,external-libs] --triplet ${TRIPLET} --recurse
 

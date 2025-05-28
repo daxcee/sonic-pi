@@ -2,6 +2,7 @@
 set -e # Quit script on error
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 WORKING_DIR="$(pwd)"
+VCPKG_TOOLCHAIN="${SCRIPT_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake"
 
 cleanup_function() {
     # Restore working directory as it was prior to this script running on exit
@@ -52,7 +53,7 @@ option() {
 
 if [[ $(uname -m) == 'arm64' ]] || [ "$SONIC_PI_BUILD_TARGET" == 'arm64' ]
 then
-  cmake -G "Unix Makefiles" -DCMAKE_OSC_ARCHITECTURES="ARM64" -DCMAKE_BUILD_TYPE="$config"  ..
+  cmake -G "Unix Makefiles" -DCMAKE_OSC_ARCHITECTURES="arm64" -DCMAKE_TOOLCHAIN_FILE="$VCPKG_TOOLCHAIN" -DVCPKG_TARGET_TRIPLET=arm64-osx -DCMAKE_BUILD_TYPE="$config"  ..
 else
-  cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE="$config" ..
+  cmake -G "Unix Makefiles" -DCMAKE_OSX_ARCHITECTURES="x86_64" -DCMAKE_TOOLCHAIN_FILE="$VCPKG_TOOLCHAIN" -DVCPKG_TARGET_TRIPLET=x64-osx -DCMAKE_BUILD_TYPE="$config"  ..
 fi
