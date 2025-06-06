@@ -270,3 +270,18 @@ Links to original samples:
 * `arovane_beat_c` - Donated by Uwe Zahn (Arovane) under a CC0 license
 * `arovane_beat_d` - Donated by Uwe Zahn (Arovane) under a CC0 license
 * `arovane_beat_e` - Donated by Uwe Zahn (Arovane) under a CC0 license
+
+
+# The Black Dog Sounds
+
+* `tbd_fxbed_loop` - Donated by The Black Dog under a CC0 license
+* `tbd_highkey_c4` - Donated by The Black Dog under a CC0 license
+* `tbd_pad_1`      - Donated by The Black Dog under a CC0 license
+* `tbd_pad_2`      - Donated by The Black Dog under a CC0 license
+* `tbd_pad_3`      - Donated by The Black Dog under a CC0 license
+* `tbd_pad_4c`     - Donated by The Black Dog under a CC0 license
+* `tbd_perc_blip`  - Donated by The Black Dog under a CC0 license
+* `tbd_perc_hat`   - Donated by The Black Dog under a CC0 license
+* `tbd_perc_tap_1` - Donated by The Black Dog under a CC0 license
+* `tbd_perc_tap_2` - Donated by The Black Dog under a CC0 license
+* `tbd_voctone`    - Donated by The Black Dog under a CC0 license
