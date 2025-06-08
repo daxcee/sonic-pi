@@ -9586,7 +9586,7 @@ Note: sliding the `phase:` opt with `phase_slide:` will also cause each echo dur
           ]},
 
         :tbd => {
-          :desc => "Black Dog samples",
+          :desc => "The Black Dog samples",
           :prefix => "tbd_",
           :samples => [
             :tbd_fxbed_loop,
