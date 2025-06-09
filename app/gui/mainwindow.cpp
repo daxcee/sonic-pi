@@ -3001,7 +3001,7 @@ void MainWindow::updateShortcuts()
     updateShortcut("DocEnd", textDocEndAct, tr("Move Cursor to End of Document"));
     updateShortcut("WordRight", textWordRightAct, tr("Move Cursor Right by Word"));
     updateShortcut("WordLeft", textWordLeftAct, tr("Move Cursor Left by Word"));
-    updateShortcut("CenterVertically", textCenterCaretAct, tr("Vertially center the caret in the editor"));
+    updateShortcut("CenterVertically", textCenterCaretAct, tr("Vertically center the caret in the editor"));
     updateShortcut("Undo", textUndoAct, tr("Undo the last action"));
     updateShortcut("Redo", textRedoAct, tr("Redo the last undo"));
     updateShortcut("SelectAll", textSelectAllAct, tr("Select all text"));
