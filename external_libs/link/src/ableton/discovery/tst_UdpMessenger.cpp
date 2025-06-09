@@ -97,10 +97,10 @@ TEST_CASE("UdpMessenger")
 {
   const TestNodeState state1 = {5, 15};
   const auto state2 = TestNodeState{3, 10};
-  const auto peerEndpoint =
-    asio::ip::udp::endpoint{asio::ip::address::from_string("123.123.234.234"), 1900};
+  const auto peerEndpoint = UdpEndpoint{IpAddress::from_string("123.123.234.234"), 1900};
   ::ableton::test::serial_io::Fixture io;
-  auto iface = test::Interface{};
+  auto iface =
+    test::Interface(UdpEndpoint{IpAddress::from_string("123.123.234.42"), 1234});
 
   SECTION("BroadcastsStateOnConstruction")
   {
@@ -119,7 +119,7 @@ TEST_CASE("UdpMessenger")
     CHECK(state2.nodeId == result.first.ident);
     CHECK(1 == result.first.ttl);
     // Sent to the multicast endpoint
-    CHECK(multicastEndpoint() == sentTo);
+    CHECK(multicastEndpointV4() == sentTo);
 
     // And the payload should parse to equal to the original state
     const auto actualState =
@@ -200,7 +200,7 @@ TEST_CASE("UdpMessenger")
     const auto result = v1::parseMessageHeader<TestNodeState::IdType>(
       begin(messageBuffer), end(messageBuffer));
     CHECK(v1::kByeBye == result.first.messageType);
-    CHECK(multicastEndpoint() == sentTo);
+    CHECK(multicastEndpointV4() == sentTo);
   }
 
   SECTION("MovingMessengerDoesntSendByeBye")
@@ -214,6 +214,25 @@ TEST_CASE("UdpMessenger")
     }
     // We should have an initial Alive and then a single ByeBye
     CHECK(2 == iface.sentMessages.size());
+  }
+
+  SECTION("DropMessageFromUnreachableNetwork")
+  {
+    auto tmpMessenger = makeUdpMessenger(
+      util::injectRef(iface), TestNodeState{}, util::injectVal(io.makeIoContext()), 1, 1);
+    auto messenger = std::move(tmpMessenger);
+    auto handler = TestHandler{};
+    messenger.receive(std::ref(handler));
+
+    // Simulate state broadcast from peer, leaving out details like payload
+    v1::MessageBuffer buffer;
+    const auto messageEnd =
+      v1::aliveMessage(state1.ident(), 0, makePayload(), begin(buffer));
+    iface.incomingMessage(
+      UdpEndpoint{IpAddress::from_string("1.2.3.4"), 5678}, begin(buffer), messageEnd);
+
+    // Received message should not be handled
+    CHECK(0 == handler.peerStates.size());
   }
 }
 
