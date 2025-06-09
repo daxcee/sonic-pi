@@ -9584,6 +9584,23 @@ Note: sliding the `phase:` opt with `phase_slide:` will also cause each echo dur
             :arovane_beat_d,
             :arovane_beat_e
           ]},
+
+        :tbd => {
+          :desc => "The Black Dog samples",
+          :prefix => "tbd_",
+          :samples => [
+            :tbd_fxbed_loop,
+            :tbd_highkey_c4,
+            :tbd_pad_1,
+            :tbd_pad_2,
+            :tbd_pad_3,
+            :tbd_pad_4,
+            :tbd_perc_blip,
+            :tbd_perc_hat,
+            :tbd_perc_tap_1,
+            :tbd_perc_tap_2,
+            :tbd_voctone]},
+
         }
 
 
