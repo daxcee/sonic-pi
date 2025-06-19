@@ -1,5 +1,5 @@
 # History
-- [v5.0.0 'Live Loop'](#v5.0.0), To be released
+- [v4.6.0 'Tuplet'](#v4.6.0), To be released
 - [v4.5.1 '8oh8'](#v4.5.1), 26th April, 2024
 - [v4.5.0 '808'](#v4.5.0), 18th Oct, 2023
 - [v4.4.0 'Sawtooth'](#v4.4.0), 28th June, 2023
@@ -34,9 +34,9 @@
 - [v2.0.1](#v2.0.1), 9th Sept, 2014
 - [v2.0 'Phoenix'](#v2.0), 2nd Sept, 2014
 
-<a name="v5.0.0"></a>
+<a name="v4.6.0"></a>
 
-## version 5 'Live Loop'
+## version 5 'Tuplet'
 
 This new release of Sonic Pi introduces a significant overhaul of the shortcuts in the GUI to allow you to change them. You can now choose between the default (called Emacs Live), Windows or Mac modes as well as customise them yourself. There's also a wonderful new function for working with tuplets designed by Dago Sondervan.
 
@@ -45,13 +45,14 @@ This new release of Sonic Pi introduces a significant overhaul of the shortcuts 
 
 ### Improvements
 * Where supported, you can now indepedently specify different input and output sound cards in the `audio-settings.toml` config file. This is done with the new options `input_sound_card_name = ""` and `output_sound_card_name = ""`. Note, you still have to ensure that the sample rate is the same for input and output.
-* Incoming OSC bundles are now supported. Timestamps are ignored (if OSC scheduling is a commonly requested feature this could be added in the future). This increases compatability with software which exlusively sends OSC in budle format such as TouchDesigner.
+* Incoming OSC bundles are now supported. Timestamps are ignored (if OSC scheduling is a commonly requested feature this could be added in the future). This increases compatability with software which exlusively sends OSC in bundle format such as TouchDesigner.
 
 ### New Fns
 * `tuplets` - Run block with tuplet timing and optional swing. Lets you supply a nested list such as `[70, 72, [73, 74], 76]` and a block. It will run the block passing in each element of the list and the sleep time between block calls will be automatically calculated depending on the length of the tuplet. Non-nested values e.g. `70`, `72` and `76` will take one beat and nested values `73`, and `74` will change the time density depending on the length of the nested list. So, a nested `[73, 74]` will be  with density 2 (all time values are halved) and a nested `[73, 74, 75]` will be with a density of 3 which creates triplets. There's also options to add swing and set the duration of one tuplet beat (defaults to 1).
 
 
 ### Samples
+* New samples by legendary techno legends The Black Dog: `:bd_fxbed_loop`, `:tbd_highkey_c4`, `:tbd_pad_1`, `:tbd_pad_2`, `:tbd_pad_3`, `:tbd_pad_4`, `:tbd_perc_blip`, `:tbd_perc_hat`, `:tbd_perc_tap_1`, `:tbd_perc_tap_2`, `:tbd_voctone`
 * Two new ride cymbals `:ride_tri` and `ride_via`.
 * New hi-hat `:hat_len`.
 
