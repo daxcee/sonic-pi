@@ -144,7 +144,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="3268"/>
         <source>Indent Code Buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>Вирівняти код у буфері</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2933"/>

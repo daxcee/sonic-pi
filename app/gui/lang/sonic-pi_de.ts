@@ -269,17 +269,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="1438"/>
         <source>Audio Inputs Enabled. Restart Sonic Pi for this setting to take effect...</source>
-        <translation>Audioeingänge aktiviert. Starte Sonic Pi neu, damit diese Einstellung wirksam wird...</translation>
+        <translation>Audioeingänge aktiviert. Starte Sonic Pi neu, damit die Einstellung wirksam wird...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1440"/>
         <source>Audio Inputs Disabled. Restart Sonic Pi for this setting to take effect...</source>
-        <translation>Audioeingänge deaktiviert. Starte Sonic Pi neu, damit diese Einstellung wirksam wird...</translation>
+        <translation>Audioeingänge deaktiviert. Starte Sonic Pi neu, damit die Einstellung übernommen wird...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1538"/>
         <source>Sonic Pi Boot Error</source>
-        <translation>Sonic Pi Start-Fehler</translation>
+        <translation>Sonic Pi Boot-Fehler</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1860"/>
@@ -475,7 +475,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="3483"/>
         <source>Link Connect</source>
-        <translation>Link Connect</translation>
+        <translation>Link verbinden</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2988"/>
@@ -485,7 +485,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="3488"/>
         <source>Tap Tempo</source>
-        <translation>Tippe Tempo</translation>
+        <translation>Tipptempo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2989"/>
@@ -744,7 +744,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="3820"/>
         <source>Local IP Addresses</source>
-        <translation>Lokale IP-Adresse</translation>
+        <translation>Lokale IP-Adressen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3834"/>
@@ -855,554 +855,555 @@
         <location filename="../mainwindow.cpp" line="1542"/>
         <source>Apologies, unable to start...
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Entschuldigung, Start nicht möglich...
+</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1544"/>
         <source>Sorry, Sonic Pi is having issues booting:</source>
-        <translation type="unfinished"></translation>
+        <translation>Es gibt Probleme beim Starten von Sonic Pi:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2544"/>
         <source>Auto Indent mode enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatische Einrückung aktiviert</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2546"/>
         <source>Auto Indent mode disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatische Einrückung deaktiviert</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2934"/>
         <location filename="../mainwindow.cpp" line="3272"/>
         <source>Comment/Uncomment code</source>
-        <translation type="unfinished"></translation>
+        <translation>Code aktivieren/ auskommentieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2935"/>
         <location filename="../mainwindow.cpp" line="3276"/>
         <source>Transpose Characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeichen transponieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2936"/>
         <source>Shift Line or Selection Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeile verschieben oder Oben Auswählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2937"/>
         <source>Shift Line or Selection Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeile verschieben oder Unten auswählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2938"/>
         <source>Move Cursor Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor nach unten bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2939"/>
         <source>Move Cursor Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor nach oben bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2940"/>
         <source>Move Cursor Down 10 Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor 10 Zeilen nach unten bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2941"/>
         <source>Move Cursor Up 10 Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor 10 Zeilen nach oben bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2942"/>
         <source>Cut to the end of the line</source>
-        <translation type="unfinished"></translation>
+        <translation>Bis zum Zeilenende ausschneiden</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2943"/>
         <source>Copy the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktive Auswahl kopieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2944"/>
         <source>Cut the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktive Auswahl ausschneiden</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2945"/>
         <source>Paste the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktive Auswahl einfügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2946"/>
         <source>Move Cursor Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor nach rechts bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2947"/>
         <source>Move Cursor Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor nach links bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2948"/>
         <source>Delete Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Löschen rechts</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2949"/>
         <source>Delete Left</source>
-        <translation type="unfinished"></translation>
+        <translation>löschen links</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2950"/>
         <source>Move Cursor to Start of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor zum Zeilenanfang bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2951"/>
         <source>Move Cursor to End of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor zum Zeilenende bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2952"/>
         <source>Move Cursor to Start of Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor zum Anfang des Dokuments bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2953"/>
         <source>Move Cursor to End of Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor zum Ende des Dokuments bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2954"/>
         <source>Move Cursor Right by Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor wortweise nach rechts bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2955"/>
         <source>Move Cursor Left by Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor wortweise nach links bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2956"/>
         <source>Vertially center the caret in the editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Einschaltungszeichen vertikal im Editor zentrieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2957"/>
         <source>Undo the last action</source>
-        <translation type="unfinished"></translation>
+        <translation>Letzte Aktion rückgängig machen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2958"/>
         <source>Redo the last undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Letzes Rückgängigmachen zurücknehmen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2959"/>
         <source>Select all text</source>
-        <translation type="unfinished"></translation>
+        <translation>Alles (Text) auswählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2960"/>
         <source>Delete word to the right</source>
-        <translation type="unfinished"></translation>
+        <translation>Wort rechts löschen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2961"/>
         <source>Delete word to the left</source>
-        <translation type="unfinished"></translation>
+        <translation>Wort links löschen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2962"/>
         <source>Uppercase word or selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Großgeschriebenes Wort oder auswählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2963"/>
         <source>Lowercase word or selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleingeschriebenes Wort oder auswählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2966"/>
         <source>Set a mark in the text</source>
-        <translation type="unfinished"></translation>
+        <translation>Markierung im Test setzen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2968"/>
         <source>Look up documentation for the current word</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentation für ausgewähltes Wort anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2972"/>
         <source>Cycle through the available colour themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorhandene Farbschemata durchwechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2976"/>
         <source>Switch to the previous tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum vorherigen Tab wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2977"/>
         <source>Switch to the next tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum nächsten Tab wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2978"/>
         <source>Switch to tab 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 1 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2979"/>
         <source>Switch to tab 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 2 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2980"/>
         <source>Switch to tab 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 3 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2981"/>
         <source>Switch to tab 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 4 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2982"/>
         <source>Switch to tab 5</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 5 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2983"/>
         <source>Switch to tab 6</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 6 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2984"/>
         <source>Switch to tab 7</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 7 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2985"/>
         <source>Switch to tab 8</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 8 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2986"/>
         <source>Switch to tab 9</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 9 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2987"/>
         <source>Switch to tab 0</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu Tab 0 wechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2991"/>
         <source>Place focus on the logs</source>
-        <translation type="unfinished"></translation>
+        <translation>Fokus auf die Logs</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3000"/>
         <source>Show or hide the buttons</source>
-        <translation type="unfinished"></translation>
+        <translation>Buttons zeigen/verbergen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3001"/>
         <source>Show or hide the cue log</source>
-        <translation type="unfinished"></translation>
+        <translation>Cue Log zeigen/verbergen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3002"/>
         <source>Show or hide the log</source>
-        <translation type="unfinished"></translation>
+        <translation>Log zeigen/verbergen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3003"/>
         <source>Zoom in the log</source>
-        <translation type="unfinished"></translation>
+        <translation>Log vergrössern</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3004"/>
         <source>Zoom out the log</source>
-        <translation type="unfinished"></translation>
+        <translation>Log verkleinern</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3005"/>
         <source>Toggle fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Vollbildmodus an/ausschalten</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3280"/>
         <source>Move Line or Selection Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeile oder Auswahl nach oben</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3284"/>
         <source>Move Line or Selection Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeile oder Auswahl nach unten</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3287"/>
         <source>Move Down One Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine Zeile nach unten</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3290"/>
         <source>Move Up One Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine Zeile nach oben</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3293"/>
         <source>Move Down Ten Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Zehn Zeilen nach unten</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3296"/>
         <source>Move Up Ten Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Zehn Zeilen nach oben</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3299"/>
         <source>Cut to End of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Bis zum Ende der Zeile ausschneiden</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3302"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3305"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausschneiden</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3308"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Einfügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3311"/>
         <source>Move Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach rechts bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3314"/>
         <source>Move Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Nach links bewegen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3317"/>
         <source>Delete Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Löschen nach vorne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3320"/>
         <source>Delete Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Löschen nach hinten</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3323"/>
         <source>Move to Start of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum Anfang der Zeile gehen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3326"/>
         <source>Move to End of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum Ende der Zeile gehen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3329"/>
         <source>Move to Start of Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum Anfang des Dokuments gehen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3332"/>
         <source>Move to End of Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Zum Ende des Dokuments gehen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3335"/>
         <source>Move Right One Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Wort nach rechts</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3338"/>
         <source>Move Left One Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Wort nach links</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3341"/>
         <source>Center Cursor Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor vertikal zentrieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3344"/>
         <source>Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>Rückgängig machen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3347"/>
         <source>Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiederherstellen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3350"/>
         <source>Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>Alles auswählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3353"/>
         <source>Delete Word Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Wort links löschen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3356"/>
         <source>Delete Word Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Wort rechts löschen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3359"/>
         <source>Upcase Word or Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Grossgeschriebenes Wort oder Auswahl</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3362"/>
         <source>Downcase Word or Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleingeschriebenes Wort oder Auswahl</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3366"/>
         <source>Show Docs for Current Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Dokumentation für ausgewähltes Wort anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3384"/>
         <source>Cycle Themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Farbschemata durchwechseln</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3406"/>
         <source>Previous Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorheriger Tab</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3410"/>
         <source>Next Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Nächster Tab</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3413"/>
         <source>Focus Tab 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 1 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3416"/>
         <source>Focus Tab 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 2 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3419"/>
         <source>Focus Tab 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 3 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3422"/>
         <source>Focus Tab 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 4 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3425"/>
         <source>Focus Tab 5</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 5 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3428"/>
         <source>Focus Tab 6</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 6 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3431"/>
         <source>Focus Tab 7</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 7 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3434"/>
         <source>Focus Tab 8</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 8 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3437"/>
         <source>Focus Tab 9</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 9 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3440"/>
         <source>Focus Tab 0</source>
-        <translation type="unfinished"></translation>
+        <translation>Tab 0 fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3546"/>
         <source>Auto Indent Code Buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>Code automatisch einrücken im Puffer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3556"/>
         <source>Set Mark</source>
-        <translation type="unfinished"></translation>
+        <translation>Markierung setzen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3674"/>
         <source>Emacs Live Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Emacs Live Tastenkombinations-Modus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3679"/>
         <source>Windows Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows Tastenkombinations-Modus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3685"/>
         <source>Mac Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mac Tastenkombinations-Modus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3690"/>
         <source>User Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Benutzer Tastenkombinations-Modus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3718"/>
         <source>Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Tastenkombinations-Modus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3881"/>
         <source>Show Log</source>
-        <translation>Zeige Protokoll an</translation>
+        <translation>Protokoll anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3886"/>
         <source>Show Cue Log</source>
-        <translation>Zeige Einsatz-Protokoll an</translation>
+        <translation>Einsatz-Protokoll anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3891"/>
         <source>Show Metronome</source>
-        <translation>Zeige Metronom</translation>
+        <translation>Metronom anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3896"/>
         <source>Show Buttons</source>
-        <translation>Zeige Schaltflächen an</translation>
+        <translation>Schaltflächen anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3901"/>
         <source>Show Tabs</source>
-        <translation>Zeige Reiter an</translation>
+        <translation>Zeige Tabs an</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3906"/>
@@ -1412,17 +1413,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="3911"/>
         <source>Zoom In Logs</source>
-        <translation type="unfinished"></translation>
+        <translation>Hineinzoomen Logs</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3914"/>
         <source>Zoom Out Logs</source>
-        <translation type="unfinished"></translation>
+        <translation>Herauszoomen Logs</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3951"/>
         <source>Focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Fokussieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3983"/>
@@ -1464,7 +1465,7 @@ nach Aktualisierungen.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4720"/>
         <source>This is Sonic Pi %1</source>
-        <translation>Dies ist Sonic Pi %1</translation>
+        <translation>Das ist Sonic Pi %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4721"/>
@@ -1491,7 +1492,7 @@ Lade Sonic Pi %1 herunter</translation>
     <message>
         <location filename="../mainwindow.cpp" line="5161"/>
         <source>Sorry, the Audio Server failed to start...</source>
-        <translation>Entschuldigung, das Starten des Audio-Servers schlug fehl...</translation>
+        <translation>Entschuldigung, beim Starten des Audio-Servers ist etwas schief gegangen...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5162"/>
@@ -1506,17 +1507,17 @@ Lade Sonic Pi %1 herunter</translation>
     <message>
         <location filename="../mainwindow.cpp" line="5165"/>
         <source>For the curious among you, Sonic Pi uses the SuperCollider Audio Server to generate its sounds. By default it will connect to your default system audio input and outputs.</source>
-        <translation>Für die Neugierigen unter euch: Sonic Pi benutzt den SuperCollider-Audio-Server zur Tonerzeugung. Standardmäßig wird der Server sich mit den System-Standard-Audio-Ein- und Ausgängen verbinden.</translation>
+        <translation>Für die Neugierigen unter euch: Sonic Pi benutzt den SuperCollider-Audio-Server zur Tonerzeugung. Standardmäßig verbindet sich der Server mit den System-Standard-Audio-Ein- und Ausgängen.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5166"/>
         <source>Unfortunately SuperCollider is having problems starting correctly. You can read the full error log below which should explain why.</source>
-        <translation>Leider hat SuperCollider Probleme vernünftig zu starten. Du kannst unten das vollständige Fehlerprotokoll lesen, was die Probleme erklären sollte.</translation>
+        <translation>Leider hat SuperCollider Probleme richtig zu starten. Du kannst unten das vollständige Fehlerprotokoll lesen, was die Probleme erklären sollte.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5167"/>
         <source>To fix this you can try changing your default operating system audio inputs and outputs (ensuring they have the same audio rate).</source>
-        <translation>Um dies zu beheben, kannst du versuchen die Audio-Ein- &amp; Ausgänge zu ändern, die im Betriebssystem als Standard eingestellt sind, (dabei beachtend, dass sie die selbe Audio-Abtastrate haben).</translation>
+        <translation>Um dies zu beheben, kannst du versuchen die Audio-Ein- &amp; Ausgänge zu ändern, die im Betriebssystem als Standard eingestellt sind (beachte , dass sie die selbe Audio-Abtastrate haben).</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5168"/>
@@ -1536,45 +1537,45 @@ Lade Sonic Pi %1 herunter</translation>
     <message>
         <location filename="../mainwindow.cpp" line="5232"/>
         <source>Sonic Pi - Unable to Write to Home Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Sonic Pi - Kann nicht in das Home-Verzeichnis schreiben</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5238"/>
         <source>Boot Error - Home Dir not writable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Start Fehler - Home-Verzeichnis hat keinen Schreibzugriff</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5240"/>
         <location filename="../mainwindow.cpp" line="5252"/>
         <source>Quick Fix: set the environment variable SONIC_PI_HOME to a directory you have permission to write to.</source>
-        <translation type="unfinished"></translation>
+        <translation>Schnelle Fehlerbehebung: Setze die Umgebungsvariable SONIC_PI_HOME auf ein Verzeichnis , in dem sie Schreibberechtigungen haben</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5244"/>
         <location filename="../mainwindow.cpp" line="5256"/>
         <source>For the curious among you, Sonic Pi automatically stores the contents of the code buffers, configuration files and logs in a folder called .sonic-pi which typically resides in your home directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Für die Neugierigen unter euch: Sonic Pi speichert die Inhalte der Code-Puffer, Konfigurationsdateien und Logs in dem Ordner .sonic-pi. Diesen findest du normalerweise in deinem Home-Verzeichnis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5245"/>
         <source>Unfortunately you don&apos;t appear to have permission to write to your home directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Leider scheint es als hättest du keine Schreibberechtigung in deinem Home-Verzeichnis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5246"/>
         <location filename="../mainwindow.cpp" line="5258"/>
         <source>To fix this you can set the environment variable SONIC_PI_HOME to any directory you have write access to and Sonic Pi will place its .sonic-pi directory within that.</source>
-        <translation type="unfinished"></translation>
+        <translation>Um dieses Problem zu lösen, setze die Umgebungsvariable SONIC_PI_HOME auf ein Verzeichnis in dem du Schreibberechtigung hast. Sonic Pi speichert dann die .sonic-pi Datei in diesem Verzeichnis</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5250"/>
         <source>Boot Error - SONIC_PI_HOME not writable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Start Fehler - SONIC_PI_HOME ist Schreibgeschützt</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5257"/>
         <source>Unfortunately it appears you have set the SONIC_PI_HOME environment variable to a directory you don&apos;t have permission to write to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Leider scheint es als hättest du die Umgebungsvariable SONIC_PI_HOME auf ein Verzeichnis gesetzt für das du keine Schreibberechtigung hast:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3248"/>
@@ -1689,7 +1690,7 @@ Lade Sonic Pi %1 herunter</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4177"/>
         <source>Save Recording</source>
-        <translation>Speichere Aufnahme</translation>
+        <translation>Aufnahme speichern</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4373"/>
@@ -1749,12 +1750,12 @@ Lade Sonic Pi %1 herunter</translation>
     <message>
         <location filename="../utils/ruby_help.h" line="3165"/>
         <source>Synths</source>
-        <translation>Synths</translation>
+        <translation>Synthesizer (Tongeneratoren)</translation>
     </message>
     <message>
         <location filename="../utils/ruby_help.h" line="3214"/>
         <source>Fx</source>
-        <translation>FX</translation>
+        <translation>Fx</translation>
     </message>
     <message>
         <location filename="../utils/ruby_help.h" line="3238"/>
@@ -1829,7 +1830,7 @@ externen PA-Systemen bei Auftritten mit Sonic Pi.</translation>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="93"/>
         <source>Invert stereo</source>
-        <translation>Tausche Stereokanäle</translation>
+        <translation>Stereokanäle vertauschen</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="94"/>
@@ -1843,7 +1844,7 @@ und Audio vom rechten Kanal auf dem linken Lautsprecher ausgegeben.</translation
     <message>
         <location filename="../widgets/settingswidget.cpp" line="95"/>
         <source>Force mono</source>
-        <translation>Erzwinge Mono</translation>
+        <translation>Mono erzwingen</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="96"/>
@@ -1975,7 +1976,7 @@ Wenn deaktiviert, können OSC-Signale innerhalb des Computers gesendet und empfa
     <message>
         <location filename="../widgets/settingswidget.cpp" line="293"/>
         <source>Automatically align code on Enter or Run </source>
-        <translation type="unfinished"></translation>
+        <translation>Code automatisch ausrichten bei Run oder Enter-Eingabe </translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="298"/>
@@ -1997,7 +1998,7 @@ Wenn deaktiviert werden keine OSC-Signale empfangen.</translation>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="194"/>
         <source>Configure MIDI behaviour</source>
-        <translation>Konfiguriere MIDI-Verhalten</translation>
+        <translation>MIDI-Verhalten konfigurieren</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="196"/>
@@ -2012,13 +2013,13 @@ Wenn deaktiviert werden keine OSC-Signale empfangen.</translation>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="202"/>
         <source>Reset MIDI</source>
-        <translation>Setze MIDI zurück</translation>
+        <translation>MIDI zurücksetzen</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="204"/>
         <source>Reset MIDI subsystems 
 (Required to detect device changes on macOS)</source>
-        <translation>Setze MIDI-Subsysteme zurück
+        <translation>MIDI-Subsysteme zurücksetzen
 (Erforderlich zur Erkennung von Geräteänderungen unter macOS )</translation>
     </message>
     <message>
@@ -2100,7 +2101,7 @@ midi_*-Funktionen gesendet werden können direkt von Sonic Pi</translation>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="128"/>
         <source>Audio hardware configuration and information.</source>
-        <translation>Audio Hardware Konfiguration und Information.</translation>
+        <translation>Audiohardware Konfiguration und Information.</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="129"/>
@@ -2140,7 +2141,7 @@ midi_*-Funktionen gesendet werden können direkt von Sonic Pi</translation>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="284"/>
         <source>Show and hide information panes such as the scope and log.</source>
-        <translation>Zeigt und verbirgt Informationspaneele, so wie Visualisierung und Protokoll-Anzeige.</translation>
+        <translation>Zeige und verstecke Informationsbereiche wie Oszilloskop und Protokoll.</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="287"/>
@@ -2265,7 +2266,7 @@ midi_*-Funktionen gesendet werden können direkt von Sonic Pi</translation>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="330"/>
         <source>Automatically hide the menubar when the app is in full screen mode. Note that the menubar is always visible when not in full screen mode.</source>
-        <translation type="unfinished"></translation>
+        <translation>Verstecke die Menüleiste automatisch, wenn sich die Anwendung im Vollbild-Modus befindet. Beachte, dass die Menüleiste immer sichtbar ist, wenn die Anwendung nicht im Vollbild-Modus ist.</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="334"/>
@@ -2364,22 +2365,22 @@ Wenn aktiviert, wird das Protokoll mit jedem neuen Eintrag nach oben weitergebl�
     <message>
         <location filename="../widgets/settingswidget.cpp" line="426"/>
         <source>Show and Hide Scope</source>
-        <translation>Anzeige Oszilloskop ein-/aus</translation>
+        <translation>Oszilloskop anzeigen/ausblenden</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="427"/>
         <source>Scope Kinds</source>
-        <translation>Oszilloskop-Arten</translation>
+        <translation>Oszilloskoparten</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="435"/>
         <source>Show scopes</source>
-        <translation>Zeige Oszilloskope</translation>
+        <translation>Oszilloskope anzeigen</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="437"/>
         <source>Show scope labels</source>
-        <translation>Zeige Oszilloskop-Beschriftungen</translation>
+        <translation>Zeige Oszilloskopbeschriftungen</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="515"/>
@@ -2395,7 +2396,7 @@ Wenn aktiviert, wird das Protokoll mit jedem neuen Eintrag nach oben weitergebl�
     <message>
         <location filename="../widgets/settingswidget.cpp" line="521"/>
         <source>Change the language of the UI &amp; Tutorial (Requires a restart to take effect)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändere die Sprache von Benutzeroberfläche &amp; Anleitung (Erfordert Neustart)</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="525"/>
@@ -2406,8 +2407,8 @@ Wenn aktiviert, wird das Protokoll mit jedem neuen Eintrag nach oben weitergebl�
         <location filename="../widgets/settingswidget.cpp" line="532"/>
         <source>Translations have been generously provided by volunteers 
 on https://hosted.weblate.org/projects/sonic-pi/. Thank you! :)</source>
-        <translation>Die Übersetzungen wurden großzügigerweise von Freiwilligen zur Verfügung gestellt
-auf https://hosted.weblate.org/projects/sonic-pi/. Dankeschön! :)</translation>
+        <translation>Übersetzungen wurden großzügiger Weise von Freiwilligen auf
+https://hosted.weblate.org/projects/sonic-pi/ zur Verfügung gestellt. Danke euch! :)</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="627"/>
@@ -2427,13 +2428,14 @@ auf https://hosted.weblate.org/projects/sonic-pi/. Dankeschön! :)</translation>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="637"/>
         <source>System language found: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Systemsprache gefunden: %1</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="921"/>
         <source>System language: %1
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Systemsprache: %1
+</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="641"/>
@@ -2455,7 +2457,7 @@ auf https://hosted.weblate.org/projects/sonic-pi/. Dankeschön! :)</translation>
         <location filename="../widgets/settingswidget.cpp" line="654"/>
         <source>Current UI language: %1
 </source>
-        <translation>Derzeitige Benutzeroberflächen Sprache: %1
+        <translation>Derzeitige Sprache der Benutzeroberfläche: %1
 </translation>
     </message>
     <message>
@@ -2543,7 +2545,7 @@ Stereo - zeigt zwei Oszilloskope an, eines oben für den linken und eines unten 
         <source>Toggle automatic update checking.
 This check involves sending anonymous information about your platform and version.</source>
         <translation>Automatische Suche nach Aktualisierungen ein-/ausschalten.
-Diese Suche versendet anonymisierte Informationen über die verwendete Plattform und Version.</translation>
+Diese Suche sendet anonymisierte Informationen über die verwendete Plattform und Version.</translation>
     </message>
     <message>
         <location filename="../widgets/settingswidget.cpp" line="474"/>

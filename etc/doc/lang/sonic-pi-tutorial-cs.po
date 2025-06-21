@@ -4,24 +4,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sonic Pi\n"
-"PO-Revision-Date: 2024-10-20 19:19+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2025-06-18 08:01+0000\n"
+"Last-Translator: LFB <luke.bucek@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/sonic-pi/tutorial/"
 "cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8-rc\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.12.1\n"
 
 #: 01-Welcome-to-Sonic-Pi.md:1
 msgid "1 Welcome to Sonic Pi"
-msgstr ""
+msgstr "1 Úvod do Sonic PI"
 
 #: 01-Welcome-to-Sonic-Pi.md:3
 msgid "Welcome friend :-)"
-msgstr ""
+msgstr "Vítej kámo :-)"
 
 #: 01-Welcome-to-Sonic-Pi.md:5
 msgid ""
@@ -30,6 +30,10 @@ msgid ""
 "l learn all about music, synthesis, programming, composition, performance and "
 "more."
 msgstr ""
+"Vítej v Sonic Pi. Doufám, že se těšíš na tvorbu vlastních zvuků stejně jako "
+"já na to, až ti ukážu, jak na to. Čeká nás fakt *zábavná* jízda, během které "
+"se naučíš spoustu věcí o hudbě, syntéze, programování, skládání, hraní a "
+"ještě mnohem víc."
 
 #: 01-Welcome-to-Sonic-Pi.md:10
 msgid ""
@@ -40,6 +44,11 @@ msgid ""
 "ve Coding Performances](https://youtube.com/samaaron) where I code with Sonic "
 "Pi live in front of audiences."
 msgstr ""
+"Ale moment, jsem to ale nezdvořák! Nejdřív bych se ti měl představit. Jsem "
+"[Sam Aaron](https://twitter.com/samaaron) - týpek, co vytvořil Sonic Pi. "
+"Najdeš mě na Twitteru jako [@samaaron](http://twitter.com/samaaron), moc rád "
+"tě tam pozdravím. Možná tě taky bude zajímat moje [Live Coding Performances]"
+", kde přímo před publikem živě kóduju hudbu v Sonic Pi."
 
 #: 01-Welcome-to-Sonic-Pi.md:18
 msgid ""
@@ -47,6 +56,9 @@ msgid ""
 "n - feedback is so helpful. You never know, your idea might be the next big fe"
 "ature!"
 msgstr ""
+"Pokud máš nějaké nápady nebo tipy, jak Sonic Pi vylepšit, sem s nimi! Zpětná "
+"vazba je pro nás hodně důležitá. Kdo ví, třeba právě tvůj nápad bude další "
+"velká vychytávka!"
 
 #: 01-Welcome-to-Sonic-Pi.md:22
 msgid ""
@@ -55,6 +67,10 @@ msgid ""
 "ree just to dip in and out of sections as you see fit. If you feel that there'"
 "s something missing, do let me know and I'll consider it for a future version."
 msgstr ""
+"Tento návod je rozdělen do sekcí podle témat. I když jsem ho napsal tak, aby "
+"se dal snadno projít od začátku až do konce, klidně si v něm listuj podle "
+"toho, co tě zrovna zajímá. Pokud ti bude něco chybět, dej mi vědět, rád to "
+"zvážím pro další verzi."
 
 #: 01-Welcome-to-Sonic-Pi.md:28
 msgid ""
@@ -62,19 +78,23 @@ msgid ""
 " stream live on [https://youtube.com/samaaron](http://youtube.com/samaaron) so"
 " please do drop by, say hi and ask me lots of questions :-)"
 msgstr ""
+"A nakonec, sledovat ostatní při live kodování je skvělý způsob, jak se učit. "
+"Já sám pravidelně streamuju živě na [https://youtube.com/samaaron](http://"
+"youtube.com/samaaron), tak se klidně někdy stav, pozdrav a zeptej se na "
+"cokoliv :-)"
 
 #: 01-Welcome-to-Sonic-Pi.md:33
 msgid "OK, let's get started..."
-msgstr ""
+msgstr "OK, pojďme na to..."
 
 #: 01.1-Live-Coding.md:1
 msgid "1.1 Live Coding"
-msgstr ""
+msgstr "1.1 Live Coding"
 
 #: 01.1-Live-Coding.md:3 09-Live-Coding.md:3 09.1-Live-Coding-Fundamentals.md:3
 #: A.02-live-coding.md:3
 msgid "Live Coding"
-msgstr ""
+msgstr "Live Coding"
 
 #: 01.1-Live-Coding.md:5
 msgid ""
@@ -83,10 +103,14 @@ msgid ""
 "uitar. This means that given some practice you can take Sonic Pi on stage and "
 "gig with it."
 msgstr ""
+"Jedna z nejzajímavějších věcí na Sonic Pi je možnost psát a *upravovat kód v "
+"reálném čase* k tvorbě hudby, podobně jako bys to dělal třeba s kytarou. To "
+"znamená, že s trochou cviku můžeš vzít Sonic Pi na pódium a vystpovat s ním "
+"před publikem."
 
 #: 01.1-Live-Coding.md:10
 msgid "Free your mind"
-msgstr ""
+msgstr "Uvolni svou mysl"
 
 #: 01.1-Live-Coding.md:12
 msgid ""
@@ -95,23 +119,31 @@ msgid ""
 "on't worry if you don't understand much (or any) of this. Just try to hold ont"
 "o your seats and enjoy..."
 msgstr ""
+"Ještě než se v tomto návodu pustíme do detailního popisu jak Sonic Pi "
+"funguje, rád bych ti ukázal jaké to je kódovat živě. Vůbec se neboj, pokud "
+"něčemu (nebo ničemu) zatím nerozumíš. Zatím se v klidu posaď, uvolni a "
+"užívej..."
 
 #: 01.1-Live-Coding.md:17
 msgid "A live loop"
-msgstr ""
+msgstr "Živá smyčka"
 
 #: 01.1-Live-Coding.md:19
 msgid "Let's get started, copy the following code into an empty buffer:"
-msgstr ""
+msgstr "Pojďme začít, zkopíruj následující kód do prázdného bufferu:"
 
 #: 01.1-Live-Coding.md:21
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "live_loop :flibble do\n"
 "  sample :bd_haus, rate: 1\n"
 "  sleep 0.5\n"
 "end"
 msgstr ""
+"live_loop :flibble do\n"
+"  sample :bd_haus, rate: 1\n"
+"  sleep 0.5\n"
+"end"
 
 #: 01.1-Live-Coding.md:28
 msgid ""
@@ -119,28 +151,33 @@ msgid ""
 ". If at any time you wish to stop the sound just hit the `Stop` button. Althou"
 "gh don't hit it just yet... Instead, follow these steps:"
 msgstr ""
+"A teď klikni na tlačítko`Spustit` a uslyšíš bušit příjemný rychlý basový "
+"buben. Kdykoliv budeš chtít zvuk zastavit, stačí stisknout tlačítko `Stop`. "
+"Ale ještě ho nemačkej... Nejdřív postupuj podle těchto kroků:"
 
 #: 01.1-Live-Coding.md:32
 msgid "Make sure the bass drum sound is still running"
-msgstr ""
+msgstr "Ujisti se, že basový buben pořád jede"
 
 #: 01.1-Live-Coding.md:33
 msgid "Change the `sleep` value from `0.5` to something higher like `1`."
-msgstr ""
+msgstr "Uprav hodnotu`sleep` z`0.5` na něco většího, třeba `1`."
 
 #: 01.1-Live-Coding.md:34
 msgid "Press the `Run` button again"
-msgstr ""
+msgstr "Znovu zmáčkni tlačítko `Spustit`"
 
 #: 01.1-Live-Coding.md:35
 msgid "Notice how the drum speed has changed."
-msgstr ""
+msgstr "Všimni si, jak se změnila rychlost bubnu."
 
 #: 01.1-Live-Coding.md:36
 msgid ""
 "Finally, *remember this moment*, this is the first time you've live coded with"
 " Sonic Pi and it's unlikely to be your last..."
 msgstr ""
+"A nakonec, *zapamatuj si tento moment*, je to poprvé, co jsi živě kódoval se "
+"Sonic Pi. A pravděpodobně to nebude naposled…"
 
 #: 01.1-Live-Coding.md:39
 msgid ""
@@ -148,9 +185,12 @@ msgid ""
 "le :bd_haus` add the line `sample :ambi_choir, rate: 0.3`. Your code should lo"
 "ok like this:"
 msgstr ""
+"Ok, to bylo celkem snadné. Pojďme zkusit přidat něco dalšího. Nad `sample "
+":bd_haus` přidej řádek `sample :ambi_choir, rate: 0.3`. Tvůj kód by měl "
+"vypadat nějak takhle:"
 
 #: 01.1-Live-Coding.md:43
-#, no-wrap
+#, fuzzy, no-wrap
 msgid ""
 "live_loop :flibble do\n"
 "  sample :ambi_choir, rate: 0.3\n"
@@ -158,6 +198,11 @@ msgid ""
 "  sleep 1\n"
 "end"
 msgstr ""
+"live_loop :flibble do\n"
+"  sample :ambi_choir, rate: 0.3\n"
+"  sample :bd_haus, rate: 1\n"
+"  sleep 1\n"
+"end"
 
 #: 01.1-Live-Coding.md:51
 msgid ""

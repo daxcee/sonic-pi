@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sonic Pi\n"
-"PO-Revision-Date: 2024-10-20 19:18+0000\n"
-"Last-Translator: LL <lu.lecocq@free.fr>\n"
+"PO-Revision-Date: 2025-03-22 22:12+0000\n"
+"Last-Translator: Olivier Humbert <trebmuh@tuxfamily.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/sonic-pi/tutorial/"
 "fr/>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.8-rc\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: 01-Welcome-to-Sonic-Pi.md:1
 msgid "1 Welcome to Sonic Pi"
@@ -7325,17 +7325,16 @@ msgid "play_pattern chord(:E3, :m7)"
 msgstr "play_pattern chord(:E3, :m7)"
 
 #: 08.2-Chords.md:30
-#, fuzzy
 msgid ""
 "Ok, that's not so fun - it played it really slowly. `play_pattern` will play e"
 "ach note in the list with a call to `sleep 1` after each call to `play`. We ca"
 "n use another function `play_pattern_timed` to specify our own timings and spe"
 "ed things up:"
 msgstr ""
-"OK, ce n'est pas si plaisant - ça le joue vraiment lentement. `play_pattern` v"
-"a jouer chaque note de la liste en le séparant par un appel à `sleep 1` entre "
-"chaque appel à `play`. Nous pouvons utiliser une autre fonction `play_pattern_"
-"timed` pour spécifier nos propres durées et accélérer les choses :"
+"OK, ce n'est pas très marrant - ça le joue vraiment lentement. `play_pattern`"
+" va jouer chaque note de la liste avec un appel à `sleep 1` entre chaque "
+"appel à `play`. Nous pouvons utiliser une autre fonction `play_pattern_timed`"
+" pour spécifier nos propres durées et accélérer les choses :"
 
 #: 08.2-Chords.md:35
 #, no-wrap
@@ -7375,6 +7374,20 @@ msgid ""
 "play 73, sustain: 0.25\n"
 "sleep 0.25"
 msgstr ""
+"play 52, sustain: 0.25\n"
+"sleep 0.25\n"
+"play 55, sustain: 0.5\n"
+"sleep 0.5\n"
+"play 59, sustain: 0.25\n"
+"sleep 0.25\n"
+"play 62, sustain: 0.5\n"
+"sleep 0.5\n"
+"play 66, sustain: 0.25\n"
+"sleep 0.25\n"
+"play 69, sustain: 0.5\n"
+"sleep 0.5\n"
+"play 73, sustain: 0.25\n"
+"sleep 0.25"
 
 #: 08.2-Chords.md:65
 msgid "Which would you prefer to write?"
@@ -7386,12 +7399,14 @@ msgid ""
 "es to fill the times. You can remove this behavior by setting the `sustain:` o"
 "pt to `0`:"
 msgstr ""
+"Notez que `play_pattern` et `play_pattern_timed` modifient le sustain des "
+"notes pour remplir les temps. Vous pouvez supprimer ce comportement en "
+"paramétrant l'option `sustain:` à `0` :"
 
 #: 08.2-Chords.md:71
 #, no-wrap
-#, fuzzy
 msgid "play_pattern_timed chord(:E3, :m13), [0.25, 0.5], sustain: 0"
-msgstr "play_pattern_timed chord(:E3, :m13), [0.25, 0.5]"
+msgstr "play_pattern_timed chord(:E3, :m13), [0.25, 0.5], sustain: 0"
 
 #: 08.3-Scales.md:1
 msgid "8.3 Scales"
@@ -9635,15 +9650,14 @@ msgid "OSC Pattern Matching"
 msgstr "Correspondance de motif OSC"
 
 #: 10.3-Pattern-Matching.md:131
-#, fuzzy
 msgid ""
 "For those curious, these matching rules are based on the Open Sound Control pa"
 "ttern matching specification which is explained in detail here: https://openso"
 "undcontrol.stanford.edu/spec-1_0.html"
 msgstr ""
-"Pour les curieux, ces règles de correspondance sont basées sur la spécificatio"
-"n de correspondance de motif Open Sound Control, qui est expliquée en détail i"
-"ci : http://opensoundcontrol.org/spec-1_0"
+"Pour les curieux, ces règles de correspondance sont basées sur la "
+"spécification de correspondance de motif Open Sound Control, qui est "
+"expliquée en détail ici : https://opensoundcontrol.stanford.edu/spec-1_0.html"
 
 #: 11-MIDI.md:1
 msgid "11 MIDI"

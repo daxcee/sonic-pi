@@ -294,32 +294,32 @@
     <message>
         <location filename="../mainwindow.cpp" line="2544"/>
         <source>Auto Indent mode enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>自动缩进模式开启</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2546"/>
         <source>Auto Indent mode disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>自动缩进模式停用</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2608"/>
         <source>Show autocompletion on</source>
-        <translation>开启自动补全显示</translation>
+        <translation>显示自动补全开启</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2612"/>
         <source>Show autocompletion off</source>
-        <translation>关闭自动补全显示</translation>
+        <translation>显示自动补全关闭</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2630"/>
         <source>Show context on</source>
-        <translation>开启上下文显示</translation>
+        <translation>上下文显示开启</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2639"/>
         <source>Show context off</source>
-        <translation>关闭上下文显示</translation>
+        <translation>上下文显示关闭</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2655"/>
@@ -335,7 +335,7 @@
         <location filename="../mainwindow.cpp" line="2934"/>
         <location filename="../mainwindow.cpp" line="3272"/>
         <source>Comment/Uncomment code</source>
-        <translation type="unfinished"></translation>
+        <translation>切换代码注释</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2935"/>
@@ -346,32 +346,32 @@
     <message>
         <location filename="../mainwindow.cpp" line="2936"/>
         <source>Shift Line or Selection Up</source>
-        <translation type="unfinished"></translation>
+        <translation>上移当前行或选定部分</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2937"/>
         <source>Shift Line or Selection Down</source>
-        <translation type="unfinished"></translation>
+        <translation>下移当前行或选定部分</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2938"/>
         <source>Move Cursor Down</source>
-        <translation type="unfinished"></translation>
+        <translation>下移光标</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2939"/>
         <source>Move Cursor Up</source>
-        <translation type="unfinished"></translation>
+        <translation>上移光标</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2940"/>
         <source>Move Cursor Down 10 Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>下移光标10行</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2941"/>
         <source>Move Cursor Up 10 Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>上移光标10行</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2942"/>
@@ -381,67 +381,67 @@
     <message>
         <location filename="../mainwindow.cpp" line="2943"/>
         <source>Copy the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>复制当前选定</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2944"/>
         <source>Cut the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>剪切当前选定</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2945"/>
         <source>Paste the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>粘贴当前选定</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2946"/>
         <source>Move Cursor Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右移光标</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2947"/>
         <source>Move Cursor Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左移光标</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2948"/>
         <source>Delete Right</source>
-        <translation type="unfinished"></translation>
+        <translation>删除右边部分</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2949"/>
         <source>Delete Left</source>
-        <translation type="unfinished"></translation>
+        <translation>删除左边部分</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2950"/>
         <source>Move Cursor to Start of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>将光标移至行首</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2951"/>
         <source>Move Cursor to End of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>将光标移至行末</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2952"/>
         <source>Move Cursor to Start of Document</source>
-        <translation type="unfinished"></translation>
+        <translation>将光标移至文档开始</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2953"/>
         <source>Move Cursor to End of Document</source>
-        <translation type="unfinished"></translation>
+        <translation>将光标移至文档末尾</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2954"/>
         <source>Move Cursor Right by Word</source>
-        <translation type="unfinished"></translation>
+        <translation>按词语右移光标</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2955"/>
         <source>Move Cursor Left by Word</source>
-        <translation type="unfinished"></translation>
+        <translation>按词语左移光标</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2956"/>
@@ -451,17 +451,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="2957"/>
         <source>Undo the last action</source>
-        <translation type="unfinished"></translation>
+        <translation>撤销上一操作</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2958"/>
         <source>Redo the last undo</source>
-        <translation type="unfinished"></translation>
+        <translation>重做上一撤销操作</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2959"/>
         <source>Select all text</source>
-        <translation type="unfinished"></translation>
+        <translation>全选文本</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2960"/>
@@ -476,12 +476,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="2962"/>
         <source>Uppercase word or selection</source>
-        <translation type="unfinished"></translation>
+        <translation>词语或选定区域转为大写</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2963"/>
         <source>Lowercase word or selection</source>
-        <translation type="unfinished"></translation>
+        <translation>词语或选定区域转为小写</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2966"/>
@@ -491,72 +491,72 @@
     <message>
         <location filename="../mainwindow.cpp" line="2968"/>
         <source>Look up documentation for the current word</source>
-        <translation type="unfinished"></translation>
+        <translation>在文档中查找当前词语</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2972"/>
         <source>Cycle through the available colour themes</source>
-        <translation type="unfinished"></translation>
+        <translation>循环变换颜色主题</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2976"/>
         <source>Switch to the previous tab</source>
-        <translation type="unfinished"></translation>
+        <translation>转到上一标签页</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2977"/>
         <source>Switch to the next tab</source>
-        <translation type="unfinished"></translation>
+        <translation>转到下一标签页</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2978"/>
         <source>Switch to tab 1</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2979"/>
         <source>Switch to tab 2</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2980"/>
         <source>Switch to tab 3</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2981"/>
         <source>Switch to tab 4</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页4</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2982"/>
         <source>Switch to tab 5</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页5</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2983"/>
         <source>Switch to tab 6</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页6</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2984"/>
         <source>Switch to tab 7</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页7</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2985"/>
         <source>Switch to tab 8</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页8</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2986"/>
         <source>Switch to tab 9</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页9</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2987"/>
         <source>Switch to tab 0</source>
-        <translation type="unfinished"></translation>
+        <translation>转到标签页0</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2991"/>
@@ -576,22 +576,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="3002"/>
         <source>Show or hide the log</source>
-        <translation type="unfinished"></translation>
+        <translation>显示或隐藏日志</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3003"/>
         <source>Zoom in the log</source>
-        <translation type="unfinished"></translation>
+        <translation>放大日志</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3004"/>
         <source>Zoom out the log</source>
-        <translation type="unfinished"></translation>
+        <translation>缩小日志</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3005"/>
         <source>Toggle fullscreen mode</source>
-        <translation type="unfinished"></translation>
+        <translation>切换全屏模式</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3243"/>
@@ -606,18 +606,18 @@
     <message>
         <location filename="../mainwindow.cpp" line="5232"/>
         <source>Sonic Pi - Unable to Write to Home Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Sonic Pi无法写入Home目录</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5238"/>
         <source>Boot Error - Home Dir not writable:</source>
-        <translation type="unfinished"></translation>
+        <translation>启动错误 - Home目录无写入权限:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5240"/>
         <location filename="../mainwindow.cpp" line="5252"/>
         <source>Quick Fix: set the environment variable SONIC_PI_HOME to a directory you have permission to write to.</source>
-        <translation type="unfinished"></translation>
+        <translation>快速修复: 把环境变量 SONIC_PI_HOME 设置为有写入权限的文件目录.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5244"/>
@@ -628,23 +628,23 @@
     <message>
         <location filename="../mainwindow.cpp" line="5245"/>
         <source>Unfortunately you don&apos;t appear to have permission to write to your home directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>您对 home 目录似乎没有写入权限:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5246"/>
         <location filename="../mainwindow.cpp" line="5258"/>
         <source>To fix this you can set the environment variable SONIC_PI_HOME to any directory you have write access to and Sonic Pi will place its .sonic-pi directory within that.</source>
-        <translation type="unfinished"></translation>
+        <translation>修复这一问题，您可以将环境变量 SONIC_PI_HOME 设置为拥有写入权限的目录，Sonic Pi 会将 .sonic-pi 目录移至所设置的目录内.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5250"/>
         <source>Boot Error - SONIC_PI_HOME not writable:</source>
-        <translation type="unfinished"></translation>
+        <translation>启动错误 - SONIC_PI_HOME 变量的目录无写入权限:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5257"/>
         <source>Unfortunately it appears you have set the SONIC_PI_HOME environment variable to a directory you don&apos;t have permission to write to:</source>
-        <translation type="unfinished"></translation>
+        <translation>您似乎将环境变量 SONIC_PI_HOME 设置为无写入权限的目录:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2928"/>
