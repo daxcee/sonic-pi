@@ -13,7 +13,7 @@ project("Sonic Pi"
   HOMEPAGE_URL "https://sonic-pi.net"
 )
 
-set(QAPPLICATION_CLASS QApplication CACHE STRING "Inheritance class for SingleApplication")
+
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
 set(QTAPP_ROOT ${CMAKE_CURRENT_LIST_DIR})
@@ -67,7 +67,7 @@ if(NOT QScintilla_FOUND)
 endif()
 
 
-add_subdirectory(vendor/SingleApplication)
+
 
 set(APP_NAME sonic-pi)
 set(MACOS_APP_NAME "Sonic Pi")
@@ -308,8 +308,8 @@ target_link_libraries(${APP_NAME}
     PRIVATE
     SonicPi::API
     QScintilla
-    Threads::Threads
-    SingleApplication::SingleApplication)
+    Threads::Threads)
+
 
 target_link_libraries(${APP_NAME}
     PRIVATE
