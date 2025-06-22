@@ -1746,12 +1746,12 @@ Get Sonic Pi %1</source>
         <translation>效果器</translation>
     </message>
     <message>
-        <location filename="../utils/ruby_help.h" line="3238"/>
+        <location filename="../utils/ruby_help.h" line="3239"/>
         <source>Samples</source>
         <translation>样本</translation>
     </message>
     <message>
-        <location filename="../utils/ruby_help.h" line="3476"/>
+        <location filename="../utils/ruby_help.h" line="3477"/>
         <source>Lang</source>
         <translation>语言</translation>
     </message>
@@ -1759,7 +1759,7 @@ Get Sonic Pi %1</source>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="85"/>
+        <location filename="../main.cpp" line="83"/>
         <source>Sonic Pi</source>
         <translation>Sonic Pi</translation>
     </message>

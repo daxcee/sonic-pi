@@ -1758,12 +1758,12 @@ Faigh Sonic Pi% 1</translation>
         <translation>FxGenericName</translation>
     </message>
     <message>
-        <location filename="../utils/ruby_help.h" line="3238"/>
+        <location filename="../utils/ruby_help.h" line="3239"/>
         <source>Samples</source>
         <translation>Samplaí</translation>
     </message>
     <message>
-        <location filename="../utils/ruby_help.h" line="3476"/>
+        <location filename="../utils/ruby_help.h" line="3477"/>
         <source>Lang</source>
         <translation>Fada</translation>
     </message>
@@ -1771,7 +1771,7 @@ Faigh Sonic Pi% 1</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../main.cpp" line="85"/>
+        <location filename="../main.cpp" line="83"/>
         <source>Sonic Pi</source>
         <translation>Sonic Pi</translation>
     </message>
