@@ -4,16 +4,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sonic Pi\n"
-"PO-Revision-Date: 2025-03-22 22:12+0000\n"
+"PO-Revision-Date: 2025-06-22 17:14+0000\n"
 "Last-Translator: Olivier Humbert <trebmuh@tuxfamily.org>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/sonic-pi/tutorial/f"
-"r/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/sonic-pi/tutorial/"
+"fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.11-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: 01-Welcome-to-Sonic-Pi.md:1
 msgid "1 Welcome to Sonic Pi"
@@ -3006,14 +3006,13 @@ msgid "Local Samples"
 msgstr "Échantillons locaux"
 
 #: 03.6-External-Samples.md:28
-#, fuzzy
 msgid ""
 "So how do you play any arbitrary WAV, AIFF, OGG, OGA, FLAC or MP3 file on your"
 " computer? All you need to do is pass the path of that file to `sample`:"
 msgstr ""
-"Alors comment faire pour jouer n'importe quel fichier WAV, AIFF, OGG, OGA ou F"
-"LAC sur votre ordinateur ? Tout ce dont vous avez besoin est de passer le chem"
-"in de ce fichier à `sample` :"
+"Alors comment faire pour jouer n'importe quel fichier WAV, AIFF, OGG, OGA, "
+"FLAC ou MP3 sur votre ordinateur ? Tout ce dont vous avez besoin est de "
+"renseigner le chemin de ce fichier à `sample` :"
 
 #: 03.6-External-Samples.md:31
 #, no-wrap
@@ -3345,17 +3344,17 @@ msgstr ""
 "fichier sample"
 
 #: 03.7-Sample-Packs.md:145
-#, fuzzy
 msgid ""
 "The `sample` fn will first gather all sources and use them to create a large l"
 "ist of candidates. This list is constructed by first adding all valid paths an"
 "d then by adding all the valid `.flac`, `.aif`, `.aiff`, `.wav`, `.wave`, `.mp"
 "3` files contained within the directories."
 msgstr ""
-"La fonction `sample` va d'abord rassembler toutes les sources et les utiliser "
-"pour créer une grande liste de candidats. Cette liste est construite en ajouta"
-"nt d'abord tous les chemins valides et puis en ajoutant tous les fichiers vali"
-"des `.flac`, `.aif`, `.aiff`, `.wav`, et `.wave` contenus dans les dossiers."
+"La fonction `sample` va d'abord rassembler toutes les sources et les "
+"utiliser pour créer une grande liste de candidats. Cette liste est "
+"construite en ajoutant d'abord tous les chemins valides puis en ajoutant "
+"tous les fichiers valides `.flac`, `.aif`, `.aiff`, `.wav`, `.wave`, et "
+"`.mp3` contenus dans les dossiers."
 
 #: 03.7-Sample-Packs.md:150
 msgid "For example, take a look at the following code:"
