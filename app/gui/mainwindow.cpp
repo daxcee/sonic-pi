@@ -551,8 +551,12 @@ void MainWindow::setupWindowStructure()
 
     connect(signalMapper, SIGNAL(mappedInt(int)), this, SLOT(changeTab(int)));
 
-    QFont font("Monospace");
+    QFont font("Hack", 10);
     font.setStyleHint(QFont::Monospace);
+#ifdef Q_OS_WIN
+    font.setStyleStrategy(QFont::PreferAntialias);
+    font.setHintingPreference(QFont::PreferFullHinting);
+#endif
     lexer->setDefaultFont(font);
 
     autocomplete = new ScintillaAPI(lexer);

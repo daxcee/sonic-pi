@@ -14,11 +14,11 @@
 #include <iostream>
 
 #include <QApplication>
-#include <QSplashScreen>
-#include <QPixmap>
 #include <QBitmap>
 #include <QLabel>
 #include <QLibraryInfo>
+#include <QPixmap>
+#include <QSplashScreen>
 #include <QThread>
 
 #include "mainwindow.h"
@@ -31,66 +31,62 @@
 #include "platform/macos.h"
 #endif
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
-  if(qgetenv("SONIC_PI_RESTART") != "")
-  {
-      std::cout << "Restarting Sonic Pi..." << std::endl;
-      // Pause for a couple of seconds to enable the previous instance
-      // of Sonic Pi to complete before starting this new replacement
-      // instance. This is to ensure that the two processes don't
-      // conflict with the SingleApplication constraint.
-      QThread::msleep(2000);
-  } else
-  {
-      std::cout << "Starting Sonic Pi..." << std::endl;
-  }
+    if (qgetenv("SONIC_PI_RESTART") != "")
+    {
+        std::cout << "Restarting Sonic Pi..." << std::endl;
+        // Pause for a couple of seconds to enable the previous instance
+        // of Sonic Pi to complete before starting this new replacement
+        // instance. This is to ensure that the two processes don't
+        // conflict with the SingleApplication constraint.
+        QThread::msleep(2000);
+    }
+    else
+    {
+        std::cout << "Starting Sonic Pi..." << std::endl;
+    }
 
 #ifndef Q_OS_DARWIN
-  Q_INIT_RESOURCE(SonicPi);
+    Q_INIT_RESOURCE(SonicPi);
 #endif
 
-  QApplication::setAttribute(Qt::AA_DontShowIconsInMenus, true);
+    QApplication::setAttribute(Qt::AA_DontShowIconsInMenus, true);
 
 #if defined(Q_OS_LINUX)
-  //linux code goes here
+    // linux code goes here
 #elif defined(Q_OS_WIN)
-  // windows code goes here
+    // windows code goes here
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QApplication::setAttribute(Qt::AA_UseDesktopOpenGL);
 
-  // A temporary fix, until stylesheets are removed.
-  // Only do the dpi scaling when the platform is high dpi
-
-  if (GetDisplayScale().width() > 1.1f)
-    {
-      QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-      QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-
-    }
 #elif defined(Q_OS_DARWIN)
-  // macOS code goes here
-  SonicPi::removeMacosSpecificMenuItems();
-  QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+    // macOS code goes here
+    SonicPi::removeMacosSpecificMenuItems();
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
 
-  QApplication app(argc, argv);
-  QFontDatabase::addApplicationFont(":/fonts/Hack-Regular.ttf");
-  QFontDatabase::addApplicationFont(":/fonts/Hack-Italic.ttf");
-  QFontDatabase::addApplicationFont(":/fonts/Hack-Bold.ttf");
-  QFontDatabase::addApplicationFont(":/fonts/Hack-BoldItalic.ttf");
+    QApplication app(argc, argv);
 
-  qRegisterMetaType<SonicPiLog::MultiMessage>("SonicPiLog::MultiMessage");
+    QFontDatabase::addApplicationFont(":/fonts/Hack-Regular.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/Hack-Italic.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/Hack-Bold.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/Hack-BoldItalic.ttf");
 
-  app.setApplicationName(QObject::tr("Sonic Pi"));
-  app.setStyle("gtk");
+    qRegisterMetaType<SonicPiLog::MultiMessage>("SonicPiLog::MultiMessage");
 
-  QPixmap pixmap(":/images/splash@2x.png");
+    app.setApplicationName(QObject::tr("Sonic Pi"));
 
-  QSplashScreen *splash = new QSplashScreen(pixmap);
-  splash->show();
-  app.processEvents();
+    app.setStyle("fusion");
 
-  MainWindow mainWin(app, splash);
+    QPixmap pixmap(":/images/splash@2x.png");
 
-  return app.exec();
+    QSplashScreen* splash = new QSplashScreen(pixmap);
+    splash->show();
+    app.processEvents();
 
+    MainWindow mainWin(app, splash);
+
+    return app.exec();
 }
