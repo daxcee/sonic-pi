@@ -2,7 +2,7 @@ B.2 Shortcut Cheatsheet
 
 # Shortcut Cheatsheet
 
-The following is a summary of the main shortcuts available within Sonic
+The following is a summary of the main Emacs Live shortcuts available within Sonic
 Pi. Please see Section B.1 for motivation and background.
 
 ## Conventions
@@ -50,8 +50,8 @@ Windows/Linux or *Cmd* on Mac):
 * `C-l`     - Centre editor
 * `M-/`     - Comment/Uncomment current line or selection
 * `C-t`     - Transpose/swap characters
-* `M-u`     - Convert next word (or selection) to upper case.  
-* `M-l`     - Convert next word (or selection) to lower case.  
+* `M-u`     - Convert next word (or selection) to upper case.
+* `M-l`     - Convert next word (or selection) to lower case.
 
 ## Navigation
 

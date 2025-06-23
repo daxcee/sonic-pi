@@ -11,7 +11,7 @@ more familiarity working and performing with Sonic Pi, you'll likely
 start using the shortcuts more and more. *I personally touch-type* (I
 recommend you consider learning too) and find myself frustrated whenever
 I need to reach for the mouse as it slows me down. I therefore use all
-of these shortcuts on a very regular basis! 
+of these shortcuts on a very regular basis!
 
 Therefore, if you learn the shortcuts, you'll learn to use your keyboard
 effectively and you'll be live coding like a pro in no time.
@@ -26,17 +26,11 @@ all makes to have similar controls and fingerings. If they didn't, you'd
 have a tough time switching between different clarinets and you'd be
 stuck to using just one make.
 
-Unfortunately the three major operating systems (Linux, Mac OS X and
-Windows) come with their own standard defaults for actions such as cut
-and paste etc. Sonic Pi will try and honour these standards. However
-*priority is placed on consistency across platforms* within Sonic Pi
-rather than attempting to conform to a given platform's standards. This
-means that when you learn the shortcuts whilst playing with Sonic Pi on
-your Raspberry Pi, you can move to the Mac or PC and feel right at home.
+Unfortunately there are a number of standards for shortcuts with macOS and Windows being two of the major styles and other more esoteric editors such as Emacs offering other approaches. You can currently choose between one of these three styles using the menu `IO -> Shortcut Mode`. You can therefore switch between a Windows and a macOS machine and keep your shortcuts consistent.
 
 ## Control and Meta
 
-Part of the notion of consistency is the naming of shortcuts. In Sonic
+A key part of the notion of consistency is the naming of shortcuts. In Sonic
 Pi we use the names *Control* and *Meta* to refer to the two main
 combination keys. On all platforms *Control* is the same. However, on
 Linux and Windows, *Meta* is actually the *Alt* key while on Mac *Meta* is
@@ -65,11 +59,10 @@ extremely well when you've learned to touch type as they use the
 standard letters rather than requiring you to move your hand to the
 mouse or the arrow keys on your keyboard.
 
-You can move to the beginning of the line with `C-a`, the end of the
-line with `C-e`, up a line with `C-p`, down a line with `C-n`, forward a
+For example, if you're in Emacs Live short cut mode, You can move to the beginning of the line with `C-a`, the end of the line with `C-e`, up a line with `C-p`, down a line with `C-n`, forward a
 character with `C-f`, and back a character with `C-b`. You can even
 delete all the characters from the cursor to the end of the line with
-`C-k`.
+`C-k`. Other modes will have their own shortcuts which can be easily discovered in the app menu.
 
 ## Tidy Code
 
