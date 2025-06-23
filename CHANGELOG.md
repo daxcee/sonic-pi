@@ -54,7 +54,7 @@ All dependencies have been updated and there are many, many bug fixes and intern
 
 
 ### Samples
-* New CC0-licensed samples by legendary techno legends The Black Dog: `:bd_fxbed_loop`, `:tbd_highkey_c4`, `:tbd_pad_1`, `:tbd_pad_2`, `:tbd_pad_3`, `:tbd_pad_4`, `:tbd_perc_blip`, `:tbd_perc_hat`, `:tbd_perc_tap_1`, `:tbd_perc_tap_2`, `:tbd_voctone`
+* New CC0-licensed samples by Sheffield techno legends The Black Dog: `:bd_fxbed_loop`, `:tbd_highkey_c4`, `:tbd_pad_1`, `:tbd_pad_2`, `:tbd_pad_3`, `:tbd_pad_4`, `:tbd_perc_blip`, `:tbd_perc_hat`, `:tbd_perc_tap_1`, `:tbd_perc_tap_2`, `:tbd_voctone`
 * Two new ride cymbals `:ride_tri` and `ride_via`.
 * New hi-hat `:hat_len`.
 
