@@ -3770,7 +3770,7 @@ void MainWindow::createToolBar()
     shortcutMenu->addAction(emacsShortcutModeAct);
     shortcutMenu->addAction(macShortcutModeAct);
     shortcutMenu->addAction(winShortcutModeAct);
-    shortcutMenu->addAction(userShortcutModeAct);
+    // shortcutMenu->addAction(userShortcutModeAct);
     ioMenu->addSeparator();
     ioMenu->addAction(midiEnabledAct);
     ioMidiInMenu = ioMenu->addMenu(tr("MIDI Inputs"));
