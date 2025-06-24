@@ -968,13 +968,21 @@ module SonicPi
         ENV["TAU_ENV"]                            = "#{ENV["SONIC_PI_ENV"] || unified_opts[:env] || "prod"}"
         ENV["MIX_ENV"]                            = ENV["TAU_ENV"]
         ENV["TAU_PHX_PORT"]                       = "#{@phx_port}"
-        ENV["TAU_LOG_PATH"]                       = "#{Paths.tau_log_path}"
-        ENV["TAU_BOOT_LOG_PATH"]                  = "#{Paths.tau_boot_log_path}"
+
+        if Util.os == :windows
+          ENV["TAU_LOG_PATH"]       = File.expand_path(Paths.tau_log_path).gsub('/', '\\')
+          ENV["TAU_BOOT_LOG_PATH"]  = File.expand_path(Paths.tau_boot_log_path).gsub('/', '\\')
+        else
+          ENV["TAU_LOG_PATH"]       = "#{Paths.tau_log_path}"
+          ENV["TAU_BOOT_LOG_PATH"]  = "#{Paths.tau_boot_log_path}"
+        end
 
         if Util.os == :windows
           if ENV["TAU_ENV"] == "prod"
-            ENV["RELEASE_SYS_CONFIG"] = "#{Paths.tau_release_sys_config_path}"
-            ENV["RELEASE_ROOT"]       = "#{Paths.tau_release_root}"
+            ENV["RELEASE_SYS_CONFIG"] = File.expand_path(Paths.tau_release_sys_config_path).gsub('/', '\\')
+            ENV["RELEASE_ROOT"]       = File.expand_path(Paths.tau_release_root).gsub('/', '\\')
+            ENV["TAU_LOG_PATH"]       = File.expand_path(Paths.tau_log_path).gsub('/', '\\')
+            ENV["TAU_BOOT_LOG_PATH"]  = File.expand_path(Paths.tau_boot_log_path).gsub('/', '\\')
 
             cmd = File.expand_path(Paths.tau_release_erl_bin_path)
 
@@ -998,7 +1006,21 @@ module SonicPi
           args = [Paths.tau_boot_path]
         end
 
+        # Start without internal log recording
         super(cmd, args, Paths.tau_boot_log_path)
+
+        enable_internal_log_recording!
+
+
+        sleep 2
+        # Check if process exited immediately
+        unless process_running?
+          Util.log "Tau process exited immediately. Exit status: #{@wait_thr.value.exitstatus if @wait_thr}"
+          Util.log "Tau output: #{@log}" if @log && !@log.empty?
+          raise "Tau failed to start - process exited immediately"
+        end
+
+        disable_internal_log_recording!
       end
 
       def restart!
