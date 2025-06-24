@@ -43,6 +43,7 @@ public:
 
   void setFocusBPMScrubber();
   void setFocusTimeWarpScrubber();
+  void toggleLink();
 
 signals:
   void linkEnabled();
@@ -68,7 +69,7 @@ private:
   qint64 firstTap = 0;
   qint64 lastTap = 0;
 
-  void toggleLink();
+
   bool isSetPosAvailable();
   void updateActiveLinkText();
   void updateLinkButtonDisplay();

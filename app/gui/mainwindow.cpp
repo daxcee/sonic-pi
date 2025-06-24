@@ -415,6 +415,7 @@ void MainWindow::setupWindowStructure()
     errorPane = new QTextBrowser;
     metroPane = new SonicPiMetro(m_spClient, m_spAPI, theme, this);
 
+
     connect(metroPane, SIGNAL(linkEnabled()), this, SLOT(checkEnableLinkMenu()));
     connect(metroPane, SIGNAL(linkDisabled()), this, SLOT(uncheckEnableLinkMenu()));
 
@@ -1365,22 +1366,9 @@ void MainWindow::enableScsynthInputsMenuChanged()
     changeEnableScsynthInputs();
 }
 
-void MainWindow::enableLinkMenuChanged()
-{
-    if (enableLinkAct->isChecked())
-    {
-        metroPane->linkEnable();
-    }
-    else
-    {
-        metroPane->linkDisable();
-    }
-}
-
 void MainWindow::toggleLinkMenu()
 {
-    enableLinkAct->setChecked(!enableLinkAct->isChecked());
-    enableLinkMenuChanged();
+    metroPane->toggleLink();
 }
 
 void MainWindow::uncheckEnableLinkMenu()
@@ -3537,6 +3525,7 @@ void MainWindow::createToolBar()
     enableLinkAct->setCheckable(true);
     enableLinkAct->setChecked(false);
     connect(enableLinkAct, SIGNAL(triggered()), this, SLOT(toggleLinkMenu()));
+
 
     linkTapTempoAct = new QAction(tr("Tap Tempo"), this);
     connect(linkTapTempoAct, SIGNAL(triggered()), metroPane, SLOT(tapTempo()));

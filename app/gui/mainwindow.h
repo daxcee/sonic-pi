@@ -233,7 +233,6 @@ private slots:
     void mixerInvertStereoMenuChanged();
     void mixerForceMonoMenuChanged();
     void enableScsynthInputsMenuChanged();
-    void enableLinkMenuChanged();
     void uncheckEnableLinkMenu();
     void checkEnableLinkMenu();
     void toggleLinkMenu();
