@@ -9,6 +9,8 @@ if not exist "vcpkg\" (
 )
 
 set VCPKG_ROOT=%~dp0/vcpkg
+set VCPKG_FORCE_SYSTEM_BINARIES=
+
 
 if not exist "vcpkg\vcpkg.exe" (
     cd vcpkg
