@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" xmlns:firewall="http://schemas.microsoft.com/wix/FirewallExtension">
 
-    <Product Id="*" Name="Sonic Pi" Language="1033" Version="3.3.0" Manufacturer="Sonic Pi" UpgradeCode="ECA5D03B-CEBD-4672-A0A2-176CBCBA4429">
+    <Product Id="*" Name="Sonic Pi" Language="1033" Version="4.6.0" Manufacturer="Sonic Pi" UpgradeCode="ECA5D03B-CEBD-4672-A0A2-176CBCBA4429">
         <Package Description="Sonic Pi Installer" Comments="Sonic Pi Installer" Platform="x64" InstallScope="perMachine" InstallerVersion="301" Compressed="yes" />
         <Property Id="REINSTALLMODE" Value="amus"/>
         <Property Id="MSIFASTINSTALL" Value="1" />
@@ -22,13 +22,11 @@
                 <Directory Id="SonicPi" Name="Sonic Pi">
                     <Directory Id="AppDir" Name="app">
                         <Directory Id="GUI" Name="gui">
-                            <Directory Id="QT" Name="qt">
-                                <Directory Id="BUILD" Name="build">
-                                    <Directory Id="RELEASE" Name="Release">
-                                        <Component Id="SONIC_PI.EXE" DiskId="1" Guid="BA4C72F9-C198-436A-B1E2-B2DF8EC65960">
-                                            <File Id="SONIC_PI.EXE" Name="sonic-pi.exe" Source="SourceDir\app\gui\qt\build\Release\sonic-pi.exe" />
-                                        </Component>
-                                    </Directory>
+                            <Directory Id="BUILD" Name="build">
+                                <Directory Id="RELEASE" Name="Release">
+                                    <Component Id="SONIC_PI.EXE" DiskId="1" Guid="BA4C72F9-C198-436A-B1E2-B2DF8EC65960">
+                                        <File Id="SONIC_PI.EXE" Name="sonic-pi.exe" Source="SourceDir\app\gui\build\Release\sonic-pi.exe" />
+                                    </Component>
                                 </Directory>
                             </Directory>
                         </Directory>

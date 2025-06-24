@@ -16,9 +16,9 @@ mkdir app
 rmdir /S /Q etc
 mkdir etc
 
-xcopy /Y /I /R /E ..\..\app\build\gui\qt\Release app\gui\qt\build\Release
-xcopy /Y /I /R /E ..\..\app\gui\qt\theme app\gui\qt\theme
-xcopy /Y /I /R /E ..\..\app\gui\qt\lang app\gui\qt\lang
+xcopy /Y /I /R /E ..\..\app\build\gui\Release app\gui\build\Release
+xcopy /Y /I /R /E ..\..\app\gui\theme app\gui\theme
+xcopy /Y /I /R /E ..\..\app\gui\lang app\gui\lang
 xcopy /Y /I /R /E ..\..\etc etc\
 
 xcopy /Y /I /R /E ..\..\app\server\beam\tau\_build app\server\beam\tau\_build
