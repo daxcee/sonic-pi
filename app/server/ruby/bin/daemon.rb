@@ -898,7 +898,7 @@ module SonicPi
       def initialize(ports, token)
         args = [
           "--enable-frozen-string-literal", "-E", "utf-8", "--yjit",
-          Paths.spider_server_path,
+          File.expand_path(Paths.spider_server_path),
           "-u",
           ports["spider-listen-to-gui"],
           ports["spider-send-to-gui"],
@@ -910,7 +910,7 @@ module SonicPi
           token
         ]
 
-        super(Paths.ruby_path, args, Paths.spider_log_path)
+        super(File.expand_path(Paths.ruby_path), args, File.expand_path(Paths.spider_log_path))
       end
     end
 
@@ -978,10 +978,10 @@ module SonicPi
 
             cmd = File.expand_path(Paths.tau_release_erl_bin_path)
 
-            args = ["-config",                  "\"#{File.expand_path(Paths.tau_release_sys_path)}\"",
-                    "-boot",                    "\"#{File.expand_path(Paths.tau_release_start_path)}\"",
-                    "-boot_var", "RELEASE_LIB", "\"#{File.expand_path(Paths.tau_release_lib_path)}\"",
-                    "-args_file",               "\"#{File.expand_path(Paths.tau_release_vm_args_path)}\"",
+            args = ["-config",                  File.expand_path(Paths.tau_release_sys_path),
+                    "-boot",                    File.expand_path(Paths.tau_release_start_path),
+                    "-boot_var", "RELEASE_LIB", File.expand_path(Paths.tau_release_lib_path),
+                    "-args_file",               File.expand_path(Paths.tau_release_vm_args_path),
                     "-noshell",
                     "-s", "elixir", "start_cli",
                     "-mode",    "embedded",
@@ -1186,7 +1186,7 @@ module SonicPi
           args << "-H" << sound_card_name
         end
 
-        cmd = Paths.scsynth_path
+        cmd = File.expand_path(Paths.scsynth_path)
 
         case Util.os
         when :linux, :raspberry
