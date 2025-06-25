@@ -986,7 +986,8 @@ module SonicPi
 
             cmd = File.expand_path(Paths.tau_release_erl_bin_path)
 
-            args = ["-boot",                    File.expand_path(Paths.tau_release_start_path),
+            args = ["-config",                  File.expand_path(Paths.tau_release_sys_path),
+                    "-boot",                    File.expand_path(Paths.tau_release_start_path),
                     "-boot_var", "RELEASE_LIB", File.expand_path(Paths.tau_release_lib_path),
                     "-args_file",               File.expand_path(Paths.tau_release_vm_args_path),
                     "-noshell",
