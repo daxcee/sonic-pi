@@ -1,5 +1,5 @@
 # History
-- [v4.6.0 'Tuplet'](#v4.6.0), To be released
+- [v4.6.0 'Tuplet'](#v4.6.0), 26th June, 2025
 - [v4.5.1 '8oh8'](#v4.5.1), 26th April, 2024
 - [v4.5.0 '808'](#v4.5.0), 18th Oct, 2023
 - [v4.4.0 'Sawtooth'](#v4.4.0), 28th June, 2023
