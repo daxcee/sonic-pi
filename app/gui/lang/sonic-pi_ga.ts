@@ -495,7 +495,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="3004"/>
         <source>Vertically center the caret in the editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Lárnaigh an caret go hingearach san eagarthóir</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3540"/>
@@ -1482,7 +1482,7 @@ Faigh Sonic Pi% 1</translation>
     <message>
         <location filename="../mainwindow.cpp" line="4804"/>
         <source>Enabling MIDI &lt;input&gt;...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ag cumasú &lt;ionchur&gt; MIDI...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5103"/>
