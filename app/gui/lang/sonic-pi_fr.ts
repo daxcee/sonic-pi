@@ -620,28 +620,28 @@
         <location filename="../mainwindow.cpp" line="5292"/>
         <location filename="../mainwindow.cpp" line="5306"/>
         <source>For the curious among you, Sonic Pi automatically stores the contents of the code buffers, configuration files and logs in a folder called .sonic-pi which typically resides in your home directory.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pour les plus curieux d&apos;entre vous, Sonic Pi stocke automatiquement le contenu des tampons de code, des fichiers de configuration et des journaux dans un dossier appelé .sonic-pi qui se trouve généralement dans votre répertoire personnel.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5293"/>
         <source>Unfortunately you don&apos;t appear to have permission to write to your home directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Malheureusement, vous ne semblez pas avoir l&apos;autorisation d&apos;écrire dans votre répertoire personnel&#xa0;:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5294"/>
         <location filename="../mainwindow.cpp" line="5308"/>
         <source>To fix this you can set the environment variable SONIC_PI_HOME to any directory you have write access to and Sonic Pi will place its .sonic-pi directory within that.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pour résoudre ce problème, vous pouvez définir la variable d&apos;environnement SONIC_PI_HOME à n&apos;importe quel répertoire auquel vous avez accès en écriture et Sonic Pi placera son répertoire .sonic-pi à l&apos;intérieur de celui-ci.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5300"/>
         <source>Boot Error - SONIC_PI_HOME not writable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de démarrage - SONIC_PI_HOME ne peut pas être écrit&#xa0;:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5307"/>
         <source>Unfortunately it appears you have set the SONIC_PI_HOME environment variable to a directory you don&apos;t have permission to write to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Malheureusement, il semble que vous ayez défini la variable d&apos;environnement SONIC_PI_HOME pour un répertoire où vous n&apos;avez pas le droit d&apos;écrire&#xa0;:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2977"/>
@@ -1035,107 +1035,107 @@
     <message>
         <location filename="../mainwindow.cpp" line="3004"/>
         <source>Vertically center the caret in the editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrer verticalement le caret dans l&apos;éditeur</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3330"/>
         <source>Move Line or Selection Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer la ligne ou la sélection vers le haut</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3334"/>
         <source>Move Line or Selection Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer la ligne ou la sélection vers le bas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3337"/>
         <source>Move Down One Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Descendre d&apos;une ligne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3340"/>
         <source>Move Up One Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Remonter d&apos;une ligne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3343"/>
         <source>Move Down Ten Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Descendre de dix lignes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3346"/>
         <source>Move Up Ten Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Remonter de dix lignes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3349"/>
         <source>Cut to End of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Couper jusqu&apos;à la fin de la ligne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3352"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3355"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Couper</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3358"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Coller</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3361"/>
         <source>Move Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer vers la droite</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3364"/>
         <source>Move Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer vers la gauche</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3367"/>
         <source>Delete Forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer en avant</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3370"/>
         <source>Delete Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer en arrière</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3373"/>
         <source>Move to Start of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer vers le début de la ligne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3376"/>
         <source>Move to End of Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer vers la fin de la ligne</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3379"/>
         <source>Move to Start of Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer vers le début du document</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3382"/>
         <source>Move to End of Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer vers la fin du document</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3385"/>
         <source>Move Right One Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer d&apos;un mot vers la droite</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3388"/>
         <source>Move Left One Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer d&apos;un mot vers la droite</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3391"/>
