@@ -1170,117 +1170,117 @@
     <message>
         <location filename="../mainwindow.cpp" line="3409"/>
         <source>Upcase Word or Selection</source>
-        <translation>Mise en majuscule d&apos;un mot ou d&apos;une sélection</translation>
+        <translation>Mise en majuscule du mot ou de la sélection</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3412"/>
         <source>Downcase Word or Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Mise en minuscule du mot ou de la sélection</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3416"/>
         <source>Show Docs for Current Word</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher la documentation pour le mot actuel</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3434"/>
         <source>Cycle Themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Thèmes du cycle</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3456"/>
         <source>Previous Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Onglet précédent</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3460"/>
         <source>Next Tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Onglet suivant</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3463"/>
         <source>Focus Tab 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3466"/>
         <source>Focus Tab 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3469"/>
         <source>Focus Tab 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 3</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3472"/>
         <source>Focus Tab 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 4</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3475"/>
         <source>Focus Tab 5</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 5</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3478"/>
         <source>Focus Tab 6</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 6</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3481"/>
         <source>Focus Tab 7</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 7</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3484"/>
         <source>Focus Tab 8</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 8</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3487"/>
         <source>Focus Tab 9</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 9</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3490"/>
         <source>Focus Tab 0</source>
-        <translation type="unfinished"></translation>
+        <translation>Focus sur l&apos;onglet 0</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3595"/>
         <source>Auto Indent Code Buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>Indentation automatique du tampon de code</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3605"/>
         <source>Set Mark</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramétrer un marqueur</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3722"/>
         <source>Emacs Live Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode raccourci d&apos;Emacs Live</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3727"/>
         <source>Windows Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode raccourci de Windows</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3732"/>
         <source>Mac Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode raccourci de Mac</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3737"/>
         <source>User Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode raccourci de l&apos;utilisateur</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3765"/>
         <source>Shortcut Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode raccourci</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3928"/>
@@ -1315,7 +1315,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="3958"/>
         <source>Zoom In Logs</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom sur les journaux</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3961"/>
