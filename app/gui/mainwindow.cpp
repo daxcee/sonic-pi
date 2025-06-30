@@ -3186,8 +3186,8 @@ void MainWindow::loadWinShortcuts()
     shortcutMap["DeleteBackward"] = resolveShortcut("Ctrl+h");
     shortcutMap["LineStart"] = resolveShortcut("Home");
     shortcutMap["LineEnd"] = resolveShortcut("End");
-    shortcutMap["DocStart"] = resolveShortcut("MetaShift+,");
-    shortcutMap["DocEnd"] = resolveShortcut("MetaShift+.");
+    shortcutMap["DocStart"] = resolveShortcut("Ctrl+Home");
+    shortcutMap["DocEnd"] = resolveShortcut("Ctrl+End");
     shortcutMap["WordRight"] = resolveShortcut("Ctrl+Right");
     shortcutMap["WordLeft"] = resolveShortcut("Ctrl+Left");
     shortcutMap["CenterVertically"] = resolveShortcut("Ctrl+l");
