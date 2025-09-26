@@ -49,6 +49,21 @@ def is_number? string
 end
 
 
+def clean_invisible_chars(text)
+  # Remove or replace problematic invisible Unicode characters that can cause
+  # syntax errors when code is copied from documentation
+  text
+    .gsub(/\u202F/, ' ')  # Replace Narrow No-Break Space with regular space
+    .gsub(/\u00A0/, ' ')  # Replace Non-Breaking Space with regular space
+    .gsub(/\u200B/, '')   # Remove Zero Width Space
+    .gsub(/\u200C/, '')   # Remove Zero Width Non-Joiner
+    .gsub(/\u200D/, '')   # Remove Zero Width Joiner
+    .gsub(/\uFEFF/, '')   # Remove Byte Order Mark
+    .gsub(/\u200E/, '')   # Remove Left-to-Right Mark
+    .gsub(/\u200F/, '')   # Remove Right-to-Left Mark
+end
+
+
 def handle_entry(msgid, filename, line, flags = [])
   reference = "#{filename}:#{line}"
   msgid.gsub!(/\\([.:_])/, '\1')
@@ -217,7 +232,8 @@ lang.each do |l|
       FileUtils::mkdir_p File.expand_path("../../../../etc/doc/generated/#{l}/tutorial", __dir__)
       $translated.each do |filename, newcontent|
         File.open(File.expand_path("../../../../etc/doc/generated/#{l}/tutorial/#{filename}", __dir__), 'w') do |f|
-          f << newcontent
+          # Clean invisible characters that can cause syntax errors
+          f << clean_invisible_chars(newcontent)
         end
       end
       if ($count_msgid > 0) then
