@@ -69,7 +69,9 @@
                   env (env-gen (core/gated-shaped-adsr attack decay sustain release attack_level decay_level sustain_level env_curve 3) gate :action FREE)
                   output (free-verb output :room 1.8 :mix 0.45)
                   output (* amp-fudge env output)
-                  output (pan2 output pan amp)]
+                  out-l (nth output 0)
+                  out-r (nth output 1)
+                  output (balance2 out-l out-r pan amp)]
               (out out_bus output)))
 
    (core/save-synthdef sonic-pi-tech_saws_gated))
